@@ -1,8 +1,10 @@
 import React from "react";
-
+import InputForm from "../InputForm/InputForm";
+import useForm from "../../../../Hooks/UseForm";
 
 const SignUpForm: React.FC = () => {
-    
+
+    const {values, handleChange, handleSubmit} = useForm()
 
     return(
         <>
@@ -35,3 +37,5 @@ const SignUpForm: React.FC = () => {
       </>
     )
 }
+
+export default SignUpForm
