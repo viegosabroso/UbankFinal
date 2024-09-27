@@ -1,6 +1,3 @@
-
-
-
 import './App.css'
 
 function App() {
@@ -8,7 +5,7 @@ function App() {
    
   return (
     <>
-      <h1>Welcome to Ubank</h1>
+      <h1>Welcome to UBank</h1>
     </>
   )
 }
