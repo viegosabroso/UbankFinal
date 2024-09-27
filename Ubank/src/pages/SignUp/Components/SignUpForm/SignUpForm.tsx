@@ -1,6 +1,7 @@
 import React from "react";
 import InputForm from "../InputForm/InputForm";
 import useForm from "../../../../Hooks/UseForm";
+import './SignUpForm.css'
 
 const SignUpForm: React.FC = () => {
 
