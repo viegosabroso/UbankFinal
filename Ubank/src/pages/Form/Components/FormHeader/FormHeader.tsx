@@ -3,7 +3,7 @@ import React from 'react';
 const Header: React.FC = () => {
     return (
     <header>
-        <h1>UBank</h1>
+        <img src="Ubank\src\assets\form logo.png" alt="Ubank" />
     </header>
     );
 };
