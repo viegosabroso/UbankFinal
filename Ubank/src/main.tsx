@@ -7,6 +7,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
+  
+  
 ]);
 
 import App from './App.tsx'
