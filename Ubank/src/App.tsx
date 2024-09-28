@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.css'; 
-import OnBoarding from "./pages/OnBoarding/OnBoarding"
-import FinantialPlan from './pages/FinantialPlan/Components/FinantialPlan';
+
+import './App.css'
+import Form from './pages/Form/Form'
 
 function App() {
   return (
-    <div className="App">
-      <FinantialPlan /> { }
-    </div>
-  );
+    <>
+      <Form></Form>
+    </>
+  )
+
 }
 
 export default App;
