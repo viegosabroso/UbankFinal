@@ -6,6 +6,7 @@ import AnswerOption from './Components/Answers/Answers';
 const Form: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
+  //esto hay q borrarlo y poner las opciones desde la base de datos
   const options = [
     { text: 'I have regular income (salary, scholarship, etc.)', icon: '/path/to/icon1.png' },
     { text: 'I have occasional income (casual work)', icon: '/path/to/icon2.png' },
@@ -19,6 +20,7 @@ const Form: React.FC = () => {
   return (
     <div>
       <Header />
+      {/* //estos props se deben cambiar por la base de datos */}
       <Question
         currentNumber="1 of 6"
         text="What is your current financial situation?"
@@ -26,6 +28,7 @@ const Form: React.FC = () => {
         imageSrc="/path/to/questionImage.png"  // Imagen de la esquina superior derecha
         questionIndicator="/path/to/indicator.png"  // Indicador de respuesta
       />
+      {/* //estos props se deben cambiar por la base de datos */}
       <div className="answers">
         {options.map((option, index) => (
           <AnswerOption
