@@ -10,11 +10,11 @@ interface AnswerOptionProps {
 const AnswerOption: React.FC<AnswerOptionProps> = ({ text, isSelected, onSelect, iconSrc }) => {
     return (
         <div
-            className={`answer-option ${isSelected ? 'selected' : ''}`}
+            className={`answer-option ${isSelected ? 'selected' : ''}`} //revisar
             onClick={onSelect}
             style={{ backgroundColor: isSelected ? 'lightgreen' : 'white' }}
         >
-        <img src={iconSrc} alt="Option Icon" className="option-icon" />
+        <img src={iconSrc} alt="Option Icon" className="option-icon" /> 
         {text}
         </div>
     );

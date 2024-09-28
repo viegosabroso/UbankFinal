@@ -1,9 +1,10 @@
 import './App.css'
+import Form from './pages/Form/Form'
 
 function App() {
   return (
     <>
-      <h1>Welcome to Ubank</h1>
+      <Form></Form>
     </>
   )
 }
