@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import FinantialPlan from './pages/FinantialPlan/Components/FinantialPlan.tsx';
 import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
 import Form from './pages/Form/Form.tsx';
 const router = createBrowserRouter([
@@ -12,7 +13,10 @@ const router = createBrowserRouter([
     element: <Form />,
 
   }
-  
+  ,{
+    path: "/Plan",
+    element: <FinantialPlan />,
+  },
   
 ]);
 

@@ -24,7 +24,7 @@ const FinantialPlan: React.FC = () => {
             <div className="card-number">2</div>
             <div className="card-circle"></div>
             <p className="card-text">
-              Our Ubank savings account offers competitive interest rates and no monthly fees.
+            Set budgets and manage your expenses using lists. With your Ubank app, we can help you!
             </p>
           </div>
 
@@ -39,7 +39,11 @@ const FinantialPlan: React.FC = () => {
 
         {/* Texto adicional */}
         <p className="contact-text">
-          Do you want to create this plan with us? Let us send you an email and let’s get in contact!
+          Do you want to create this plan with us?                              
+        </p>
+       {/* Texto adicional Negro */}
+       <p className="contact-text2">
+          ¡Let us send you an email and let’s get in contact!
         </p>
 
         {/* Botones */}
