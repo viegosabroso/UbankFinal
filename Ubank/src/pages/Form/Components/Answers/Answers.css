@@ -39,3 +39,26 @@
     margin-left: 30px;
     background: none;
 }
+
+/* Media queries para asegurar el diseño en pantallas móviles */
+@media (max-width: 480px) {
+    .answer-option {
+        width: 90%; /* La tarjeta ocupará todo el ancho del contenedor */
+        height: 140px; /* Ajusta la altura */
+    }
+
+    .answer-option p {
+        margin-top: 30px; /* Ajusta la posición del texto */
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .answer-option img {
+        margin-top: 15px; /* Ajusta el margen superior de la imagen */
+        width: 35px; /* Ajusta el tamaño de la imagen */
+        height: 35px;
+    }
+
+    .answer-option:hover {
+        transform: translateY(-5px); /* Ajusta la animación de la tarjeta */
+    }
+}

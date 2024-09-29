@@ -6,3 +6,12 @@
     margin-top: 40px;
     justify-content: center;
 }
+
+@media (max-width: 480px) {
+    .answers {
+        flex-direction: column; /* Apila las tarjetas verticalmente en móviles */
+        gap: 20px; /* Ajusta el espacio entre tarjetas */
+        align-items: center;
+        margin-top: 30px;
+    }
+}

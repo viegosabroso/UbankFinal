@@ -16,7 +16,6 @@
     align-items: left;
     margin: 0;
     padding: 0;
-    width: 100%;
     height: 100%;
     position: relative;
     margin-left: 25px;
@@ -37,8 +36,8 @@
     height: 200px;
     flex-shrink: 0;
     position: absolute;
-    right: 100px;
-    margin-top: -220px;
+    right: 50px;
+    margin-top: -230px;
     z-index: 1;
     background: none;
 }
@@ -48,4 +47,25 @@
     margin: 0;
 }
 
-
+@media (max-width: 480px) {
+    .question-text h2{
+        font-size: 30px;
+        width: 100%;
+        line-height: 40px;
+    }
+    .question-text img{
+        width: 150px;
+        height: 150px;
+        right: 50px;
+        margin-top: 25px;
+        margin-left: 150px;
+        position: relative;
+    }
+    .question-indicator img{
+        width: 150px;
+        height: 5px;
+    }
+    .question-number{
+        font-size: 12px;
+    }
+}
