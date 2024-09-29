@@ -6,6 +6,7 @@ import './Clients/firebase.ts' // Importa la configuración de Firebase para ini
 import SignUp from './pages/SignUp/Components/SignUpForm/SignUpForm.tsx';
 
 
+
 const router = createBrowserRouter([
 
       {
