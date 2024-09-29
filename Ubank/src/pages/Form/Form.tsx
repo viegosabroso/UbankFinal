@@ -5,10 +5,11 @@ import AnswerOption from './Components/Answers/Answers';
 import NavigationButtons from './Components/NavigationButtons/Navigation';
 import './Form.css';
 import { transformData } from '../../utils/Transformer';
-import { queryEqual } from 'firebase/firestore';
+
 
 const Form: React.FC = () => {
-  const [questions, setQuestions] = useState< Array<any>>([]);
+  const [questions, setQuestions] = useState<any[]>([]);
+  const [questionIndex, setQuestionIndex] = useState<number>(0);
 
   //esto hay q borrarlo y poner las opciones desde la base de datos
   const options = [
@@ -22,11 +23,14 @@ const Form: React.FC = () => {
   //   setSelectedAnswer(index);
   // };
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchData = async () => {
         try {
-            const data = await transformData(); 
-            setQuestions(data || []);
+            const data = await transformData() ||   [];
+
+           const sortbyid = data.sort((a, b) => a.id - b.id);
+           setQuestions(sortbyid);
+            
             
 
         } catch (error) {
@@ -39,7 +43,12 @@ const Form: React.FC = () => {
    
 }, []);
 
-  
+const optionss = questions.length > 0 ? questions[questionIndex].options: [];
+
+console.log(optionss);
+
+
+
 
   
   return (
@@ -47,18 +56,18 @@ const Form: React.FC = () => {
       <Header />
       {/* //estos props se deben cambiar algunos por la base de datos y otros son de logica*/}
       <Question
-        currentNumber="1 of 6"
-        text="What is your current financial situation?"
+        currentNumber={"Question " + (questionIndex + 1) + " of " + questions.length}
+        text={questions.length > 0 ? questions[questionIndex].text : ""}
         instruction="Select one option"
         imageSrc="/path/to/questionImage.png"  // Imagen de la esquina superior derecha
         questionIndicator="/path/to/indicator.png"  // Indicador de respuesta
       />
       {/* //estos props se deben cambiar por la base de datos */}
       <div className="answers">
-        {options.map((option, index) => (
+        {optionss.map((option: any, index: number) => (
           <AnswerOption
             key={index}
-            text={option.text}
+            text={option.label}
             iconSrc={option.icon}
           />
         ))}

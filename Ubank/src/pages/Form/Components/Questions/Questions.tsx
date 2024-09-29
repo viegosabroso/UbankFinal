@@ -3,7 +3,7 @@ import '../Questions/Question.css';
 import img from '../../../../assets/ilustracionesform6.png';
 import img2 from '../../../../assets/indicator1.png';
 interface QuestionProps {
-  currentNumber: string;  // Ejemplo: "1 of 6"
+  currentNumber: any;  // Ejemplo: "1 of 6"
   text: string;  // El texto de la pregunta
   instruction: string;  // Instrucción, por ejemplo "Select one option"
   imageSrc: string;  // URL o ruta de la imagen en la esquina superior derecha
