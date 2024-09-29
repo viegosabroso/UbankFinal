@@ -1,0 +1,191 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF; 
+}
+
+/* Contenedor principal */
+.financial-plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;  
+    height: 100vh; 
+    padding: 16px; 
+    background-color: white;
+}
+
+/* Rectángulo negro superior */
+.top-rectangle {
+    width: 100%;
+    height: 80px; /* Ajusta según sea necesario */
+    background-color: #000;
+    margin-bottom: 24px;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; 
+    padding: 16px;
+}
+
+/* Subtítulo */
+.subtitle {
+    color: #1F1E30;
+    text-align: center; 
+    font-size: 32px; /* Tamaño de letra deseado */
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 8px; /* Ajusta el espaciado */
+}
+
+/* Subtítulo "Efficient" */
+.efficient-subtitle {
+    color: #8644DB;
+    text-align: center; 
+    font-size: 32px; /* Ajusta el tamaño si es necesario */
+    font-weight: 500;
+    margin-bottom: 16px; /* Espaciado entre subtítulos */
+}
+
+/* Contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaciado entre tarjetas */
+}
+
+/* Tarjeta */
+.card {
+    width: 291px;
+    height: 310px; /* Ajusta el tamaño de la tarjeta */
+    border-radius: 24px;
+    background: #ac7373;
+    position: relative;
+    padding: 16px; /* Espaciado interno */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Número en la tarjeta */
+.card-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 150%; /* 16.5px */
+}
+
+/* Círculo para imagen */
+.card-circle {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: 100px; /* Ajusta el tamaño según sea necesario */
+    
+    border-radius: 50%; /* Hace el círculo */
+    background-color: #C4C4C4; /* Color de fondo por defecto */
+    margin-bottom: 10px; /* Espaciado entre el círculo y el texto */
+}
+
+/* Texto de la tarjeta */
+.card-text {
+    color: rgba(23, 26, 31, 0.85);
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 150%; /* 16.5px */
+    letter-spacing: -0.121px;
+}
+
+/* Texto adicional */
+.contact-text {
+    color: #8644DB;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%; /* 22.1px */
+    letter-spacing: -0.143px;
+    margin-top: 24px; /* Espacio entre las tarjetas y el texto */
+    margin-bottom: 16px; /* Espacio entre el texto y los botones */
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 16px; /* Espaciado entre botones */
+}
+
+/* Estilo del botón */
+.button {
+    display: flex;
+    width: 114.4px;
+    height: 42.24px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px; /* Ajusta el radio del borde si es necesario */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Botón gris */
+.gray-button {
+    background-color: #D3D3D3; /* Color gris */
+    color: #000; /* Color del texto en gris */
+}
+
+/* Botón de color */
+.colored-button {
+    background-color: #8644DB; /* Color de fondo */
+    color: #FFFFFF; /* Color del texto en el botón */
+}
+
+/* Media Queries para Responsividad */
+@media (min-width: 768px) {
+    .financial-plan-container {
+        padding: 32px;
+    }
+    
+    .subtitle {
+        font-size: 56px; /* Ajusta según sea necesario */
+    }
+    
+    .efficient-subtitle {
+        font-size: 36px; /* Ajusta según sea necesario */
+    }
+
+    .card {
+        width: 300px; /* Ajusta el ancho si es necesario */
+    }
+}
+
+@media (min-width: 1024px) {
+    .financial-plan-container {
+        max-width: 800px;
+    }
+    
+    .subtitle {
+        font-size: 64px; /* Ajusta según sea necesario */
+    }
+
+    .efficient-subtitle {
+        font-size: 48px; /* Ajusta según sea necesario */
+    }
+}
