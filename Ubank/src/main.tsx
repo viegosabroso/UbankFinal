@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   }
   ,{
     path: "/Plan",
-    element: <OnBoarding />,
+    element: <FinantialPlan />,
   },
   
 ]);
