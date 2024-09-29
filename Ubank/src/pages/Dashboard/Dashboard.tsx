@@ -20,8 +20,8 @@ const Dashboard: React.FC = () => {
         }
       } else {
         // El usuario no está logueado, redirigimos y mostramos un toast
-        toast.error("Inicie sesión para acceder al Dashboard");
-        navigate("/login"); // Redirigir a la página de login
+        toast.success("finalizó su sesion exitosamente");
+        navigate("/"); // Redirigir a la página de login
       }
     });
 
