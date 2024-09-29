@@ -6,6 +6,7 @@ import './Clients/firebase.ts' // Importa la configuración de Firebase para ini
 import SignUp from './pages/SignUp/Components/SignUpForm/SignUpForm.tsx';
 import LogIn from './pages/LogIn/LogIn.tsx';
 import Dashboard from './pages/Dashboard/Dashboard.tsx';
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -32,5 +33,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router}/>
+    <Toaster /> 
   </StrictMode>
 )

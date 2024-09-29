@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputForm from "../SignUp/Components/InputForm/InputForm";
 import useAuth from "../../Hooks/UseAuth"; 
 import { useNavigate, Link } from 'react-router-dom'; 
+import toast from "react-hot-toast";
 
 
 const LogIn: React.FC = () => {
@@ -27,8 +28,10 @@ const LogIn: React.FC = () => {
       // Llama a la función login de Firebase
       await login(values.email, values.password);
       navigate("/dashboard");
-    } catch (error) {
-      // Maneja los errores aquí si es necesario
+    } catch (error:any) {
+        toast.error("Error al iniciar sesión. Verifique sus credenciales."); //agregar otros tipos de error como contraseña incorrecta
+        setLoading(false); // Asegura que el loading se detenga
+    
     } 
   };
 

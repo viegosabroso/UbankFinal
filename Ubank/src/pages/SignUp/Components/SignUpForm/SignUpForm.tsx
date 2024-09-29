@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,  } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../../../Hooks/UseAuth";
 import InputForm from "../InputForm/InputForm";  // Importa el componente InputForm
@@ -14,13 +14,6 @@ const SignUp: React.FC = () => {
   const { register } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    setValues({
-      fullName: "",
-      email: "",
-      password: "",
-    });
-  }, []); 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
