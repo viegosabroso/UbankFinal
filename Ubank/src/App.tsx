@@ -1,3 +1,4 @@
+
 import './App.css'
 import Form from './pages/Form/Form'
 
@@ -7,6 +8,7 @@ function App() {
       <Form></Form>
     </>
   )
+
 }
 
-export default App
+export default App;

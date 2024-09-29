@@ -1,0 +1,172 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF; 
+}
+
+/* Nuevo contenedor padre */
+.flex-container {
+    display: flex; /* Establece el contenedor como flex */
+    align-items: center; /* Alinea elementos al centro verticalmente */
+    justify-content: center; /* Alinea elementos al centro horizontalmente */
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+/* Contenedor de Onboarding */
+.onboarding-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;  
+    max-width: 800px; /* Mantiene un tamaño máximo */
+    padding: 16px; 
+    background-color: white;
+}
+
+/* Rectángulo negro superior */
+.top-rectangle {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    margin-bottom: 24px;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; 
+    padding: 16px;
+}
+
+.image-placeholder {
+    width: 352px;
+    height: 352px;
+    background-color: #C4C4C4;
+    margin-bottom: 24px;
+}
+
+/* Subtítulo */
+.subtitle {
+    color: #1F1E30;
+    text-align: center;
+    font-size: 28px; 
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+/* Texto descriptivo */
+.body-text {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Botón CTA */
+.cta-button {
+    width: 160px;
+    height: 45px;
+    background-color: #8644DB;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #7A3CC8;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+    .onboarding-container {
+        padding: 32px;
+    }
+    
+    .subtitle {
+        font-size: 32px; /* Más grande en pantallas grandes */
+    }
+    
+    .body-text {
+        font-size: 16px;
+    }
+    
+    .cta-button {
+        width: 180px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .onboarding-container {
+        max-width: 800px;
+    }
+    
+    .subtitle {
+        font-size: 36px;
+    }
+    
+    .body-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1027px) {
+    .top-rectangle {
+      width: 99px; /* Cambia el tamaño del rectángulo negro */
+      height: 48px;
+      align-self: flex-start; /* Alinea a la izquierda */
+    }
+  }
+
+@media (min-width: 1920px) {
+    .image-placeholder {
+        width: 1088px; /* Nuevo tamaño */
+        height: 462px; /* Nuevo tamaño */
+    }
+
+    .subtitle {
+        font-size: 48px; /* Nuevo tamaño */
+    }
+
+    .body-text {
+        color: #2D2D2D;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 25.5px */
+        letter-spacing: -0.187px;
+        width: 633px; /* Nuevo tamaño */
+    }
+
+    .cta-button {
+        display: flex;
+        width: 130px; /* Nuevo tamaño */
+        height: 48px; /* Nuevo tamaño */
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0; /* No se reducirá el tamaño */
+    }
+}
