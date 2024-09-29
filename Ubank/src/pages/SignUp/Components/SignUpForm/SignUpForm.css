@@ -51,7 +51,7 @@
   }
   
   .left-panel .ubank {
-    color: #6A35F5;
+    color: #8644DB;
     font-weight: bold;
   }
   
@@ -76,7 +76,7 @@
   }
   
   .right-panel .highlight {
-    color: #6A35F5;
+    color: #8644DB;
   }
   
   .right-panel p {
@@ -113,13 +113,13 @@
   
   .input-field input:focus {
     outline: none;
-    border-color: #6A35F5;
+    border-color: #8644DB;
     box-shadow: 0 0 5px rgba(106, 53, 245, 0.3);
   }
   
   /* Button styles */
   .sign-up-button {
-    background-color: #6A35F5;
+    background-color: #8644DB;
     color: white;
     padding: 1rem;
     border: none;
@@ -130,7 +130,7 @@
   }
   
   .sign-up-button:hover {
-    background-color: #5631C9;
+    background-color: #8644DB;
   }
   
   /* Login link */
@@ -147,7 +147,7 @@
     }
   
     .left-panel {
-      display: none; /* Puedes ocultar la parte izquierda en pantallas pequeñas */
+      display: none; 
     }
   
     .right-panel {
