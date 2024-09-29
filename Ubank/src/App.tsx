@@ -1,12 +1,14 @@
+
+
+
 import './App.css'
-import SignUpPage from './pages/SignUp/SignUp'
 
 function App() {
 
-   
   return (
     <>
-      <SignUpPage></SignUpPage>
+      <h1>Welcome to Ubank</h1>
+      <img src={""} alt="" />
     </>
   )
 }
