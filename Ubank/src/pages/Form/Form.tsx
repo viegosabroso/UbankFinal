@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Components/FormHeader/FormHeader';
 import Question from './Components/Questions/Questions';
 import AnswerOption from './Components/Answers/Answers';
 import NavigationButtons from './Components/NavigationButtons/Navigation';
 import './Form.css';
+import { transformData } from '../../utils/Transformer';
+import { queryEqual } from 'firebase/firestore';
 
 const Form: React.FC = () => {
+  const [questions, setQuestions] = useState< Array<any>>([]);
 
   //esto hay q borrarlo y poner las opciones desde la base de datos
   const options = [
@@ -19,6 +22,27 @@ const Form: React.FC = () => {
   //   setSelectedAnswer(index);
   // };
 
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const data = await transformData(); 
+            setQuestions(data || []);
+            
+
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    };
+
+    fetchData();
+   
+    
+   
+}, []);
+
+  
+
+  
   return (
     <div>
       <Header />
