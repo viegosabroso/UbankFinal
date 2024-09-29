@@ -1,7 +1,7 @@
 
 .answer-option{
-    width: 320px;
-    height: 300px;
+    width: 300px;
+    height: 280px;
     background-color: rgb(255, 255, 255);
     border-radius: 31px;
 }
@@ -17,7 +17,7 @@
 .answer-option p{
     font-weight: 500;
     color: #292929;
-    margin-top: 210px;
+    margin-top: 140px;
     padding: 0 28px;
     background:none;
     font-size: 15px;
@@ -30,4 +30,12 @@
 
 .answer-option p:hover{
     color: #234e03;
+}
+
+.answer-option img{
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background: none;
 }

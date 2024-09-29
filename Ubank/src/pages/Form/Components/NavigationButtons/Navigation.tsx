@@ -1,10 +1,11 @@
 import React from 'react';
+import '../NavigationButtons/Navigation.css';
 
 const NavigationButtons: React.FC = () => {
     return (
-    <div>
-        <button>Back</button>
-        <button>Next</button>
+    <div className='buttons-container'>
+        <button className='back'>Back</button>
+        <button className='next'>Next</button>
     </div>
     );
 };

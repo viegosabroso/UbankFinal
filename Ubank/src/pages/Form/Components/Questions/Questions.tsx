@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Questions/Question.css';
 import img from '../../../../assets/ilustracionesform6.png';
+import img2 from '../../../../assets/indicator1.png';
 interface QuestionProps {
   currentNumber: string;  // Ejemplo: "1 of 6"
   text: string;  // El texto de la pregunta
@@ -13,7 +14,7 @@ const Question: React.FC<QuestionProps> = ({ currentNumber, text, instruction, i
     return (
         <div className="question-container">
             <div className="question-indicator">
-                <img src={questionIndicator} alt="Question Indicator" />
+                <img src={img2} alt="Question Indicator" />
                 <p className="question-number">{currentNumber}</p>
             </div>
             <div className="question-text">
