@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../../../Hooks/UseAuth";
 import InputForm from "../InputForm/InputForm";  // Importa el componente InputForm
 import './SignUpForm.css'
@@ -83,7 +83,7 @@ const SignUp: React.FC = () => {
           </button>
         </form>
         <p className="login-link">
-          Do you already have an Account? <a href="/login">Log In</a>
+          Do you already have an Account? <Link to="/login">Log In</Link>
         </p>
       </div>
     </div>

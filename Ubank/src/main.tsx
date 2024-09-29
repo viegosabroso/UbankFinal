@@ -4,6 +4,8 @@ import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
 import './index.css'
 import './Clients/firebase.ts' // Importa la configuración de Firebase para inicializarla
 import SignUp from './pages/SignUp/Components/SignUpForm/SignUpForm.tsx';
+import LogIn from './pages/LogIn/LogIn.tsx';
+
 
 
 
@@ -12,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/", 
         element: <SignUp />,
+      },
+      {
+        path: "login", 
+        element: <LogIn />,
       },
 
 

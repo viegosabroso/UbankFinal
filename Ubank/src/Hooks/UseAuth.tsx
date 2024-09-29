@@ -1,4 +1,3 @@
-// src/hooks/useAuth.tsx
 import { useState, useEffect } from "react";
 import { auth, db } from "../Clients/firebase";
 import {
