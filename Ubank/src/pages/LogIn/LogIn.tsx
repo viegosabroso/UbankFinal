@@ -26,11 +26,10 @@ const LogIn: React.FC = () => {
     try {
       // Llama a la función login de Firebase
       await login(values.email, values.password);
+      navigate("/dashboard");
     } catch (error) {
       // Maneja los errores aquí si es necesario
-    } finally {
-      setLoading(false); // Detiene el loading
-    }
+    } 
   };
 
   return (
