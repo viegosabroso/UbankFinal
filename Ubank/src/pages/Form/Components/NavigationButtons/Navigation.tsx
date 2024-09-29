@@ -1,12 +1,16 @@
 import React from 'react';
 import '../NavigationButtons/Navigation.css';
+interface NavigationProps {
+    Plusindex: () => void;
+    Minusindex: () => void;
+}
 
-const NavigationButtons: React.FC = () => {
+const NavigationButtons: React.FC<NavigationProps> = ({ Plusindex, Minusindex }) => {
     return (
-    <div className='buttons-container'>
-        <button className='back'>Back</button>
-        <button className='next'>Next</button>
-    </div>
+        <div className='buttons-container'>
+            <button className='back' onClick={Minusindex}>Back</button>
+            <button className='next' onClick={Plusindex}>Next</button>
+        </div>
     );
 };
 

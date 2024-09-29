@@ -47,6 +47,20 @@ const optionss = questions.length > 0 ? questions[questionIndex].options: [];
 
 console.log(optionss);
 
+const handleNext = () => {
+  if (questionIndex < questions.length - 1) {
+    setQuestionIndex(questionIndex + 1);
+  }
+};
+
+const handlePrevious = () => {
+  if (questionIndex > 0) {
+    setQuestionIndex(questionIndex - 1);
+    console.log("holaquehace");
+    
+  }
+};
+
 
 
 
@@ -72,7 +86,7 @@ console.log(optionss);
           />
         ))}
       </div>
-      <NavigationButtons></NavigationButtons>
+      <NavigationButtons Plusindex={handleNext} Minusindex={handlePrevious}></NavigationButtons>
     </div>
   );
 };
