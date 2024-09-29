@@ -4,3 +4,13 @@
     font-weight: 500;
     width: 60%;
 }
+
+.question-text img{
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 60px;
+    top: 50px;
+}
+

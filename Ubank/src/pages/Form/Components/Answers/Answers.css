@@ -1,7 +1,7 @@
 
 .answer-option{
-    width: 304px;
-    height: 330.888px;
+    width: 320px;
+    height: 300px;
     background-color: rgb(255, 255, 255);
     border-radius: 31px;
 }
@@ -17,7 +17,7 @@
 .answer-option p{
     font-weight: 500;
     color: #292929;
-    margin-top: 230px;
+    margin-top: 210px;
     padding: 0 28px;
     background:none;
     font-size: 15px;
