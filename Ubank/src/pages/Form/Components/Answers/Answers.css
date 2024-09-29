@@ -1,0 +1,33 @@
+
+.answer-option{
+    width: 304px;
+    height: 330.888px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 31px;
+}
+
+.answer-option:hover{
+    background-color: #D7F177;
+    border-radius: 31px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    transform: translateY(-20px); /* Mueve la tarjeta 10px hacia arriba */
+    transition: 0.2s;
+}
+
+.answer-option p{
+    font-weight: 500;
+    color: #292929;
+    margin-top: 230px;
+    padding: 0 28px;
+    background:none;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 25.5px */
+    letter-spacing: -0.187px;
+    width: 80%;
+}
+
+.answer-option p:hover{
+    color: #234e03;
+}

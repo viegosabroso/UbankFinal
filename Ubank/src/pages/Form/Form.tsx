@@ -3,15 +3,16 @@ import Header from './Components/FormHeader/FormHeader';
 import Question from './Components/Questions/Questions';
 import AnswerOption from './Components/Answers/Answers';
 import NavigationButtons from './Components/NavigationButtons/Navigation';
+import './Form.css';
 
 const Form: React.FC = () => {
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
   //esto hay q borrarlo y poner las opciones desde la base de datos
   const options = [
     { text: 'I have regular income (salary, scholarship, etc.)', icon: '/path/to/icon1.png' },
     { text: 'I have occasional income (casual work)', icon: '/path/to/icon2.png' },
     { text: 'I have no income but I want to save', icon: '/path/to/icon3.png' },
+    { text: 'I have no income and I do not want to save', icon: '/path/to/icon4.png' },
   ];
 
   // const selectAnswer = (index: number) => {
@@ -36,8 +37,6 @@ const Form: React.FC = () => {
             key={index}
             text={option.text}
             iconSrc={option.icon}
-            isSelected={selectedAnswer === index}
-            onSelect={() => selectAnswer(index)}
           />
         ))}
       </div>

@@ -1,0 +1,8 @@
+.answers{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}

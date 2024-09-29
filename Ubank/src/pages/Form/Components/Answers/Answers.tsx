@@ -1,21 +1,16 @@
 import React from 'react';
-
+import './Answers.css';
 interface AnswerOptionProps {
     iconSrc: string;  //propiedad para el ícono 
     text: string;
-    isSelected: boolean;
-    onSelect: () => void;
 }
 
-const AnswerOption: React.FC<AnswerOptionProps> = ({ text, isSelected, onSelect, iconSrc }) => {
+//aqui debe haber un map de esta respuesta para que se muestren todas las opciones desde firebase
+const AnswerOption: React.FC<AnswerOptionProps> = ({ text, iconSrc }) => {
     return (
-        <div
-            className={`answer-option ${isSelected ? 'selected' : ''}`} //revisar
-            onClick={onSelect}
-            style={{ backgroundColor: isSelected ? 'lightgreen' : 'white' }}
-        >
-        <img src={iconSrc} alt="Option Icon" className="option-icon" /> 
-        {text}
+        <div className="answer-option">
+        <img src={iconSrc} alt="icon" />
+        <p>{text}</p>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../Questions/Question.css';
 interface QuestionProps {
   currentNumber: string;  // Ejemplo: "1 of 6"
   text: string;  // El texto de la pregunta
