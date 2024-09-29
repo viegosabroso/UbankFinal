@@ -36,7 +36,6 @@ const Form: React.FC = () => {
 
     fetchData();
    
-    
    
 }, []);
 
