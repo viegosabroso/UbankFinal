@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Header from './Components/FormHeader/FormHeader';
 import Question from './Components/Questions/Questions';
 import AnswerOption from './Components/Answers/Answers';
-
-
+import NavigationButtons from './Components/NavigationButtons/Navigation';
 
 const Form: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -15,14 +14,14 @@ const Form: React.FC = () => {
     { text: 'I have no income but I want to save', icon: '/path/to/icon3.png' },
   ];
 
-  const selectAnswer = (index: number) => {
-    setSelectedAnswer(index);
-  };
+  // const selectAnswer = (index: number) => {
+  //   setSelectedAnswer(index);
+  // };
 
   return (
     <div>
       <Header />
-      {/* //estos props se deben cambiar por la base de datos */}
+      {/* //estos props se deben cambiar algunos por la base de datos y otros son de logica*/}
       <Question
         currentNumber="1 of 6"
         text="What is your current financial situation?"
@@ -42,6 +41,7 @@ const Form: React.FC = () => {
           />
         ))}
       </div>
+      <NavigationButtons></NavigationButtons>
     </div>
   );
 };
