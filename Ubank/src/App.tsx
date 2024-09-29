@@ -1,14 +1,12 @@
-import './App.css'
-import SignUpPage from './pages/SignUp/SignUp'
+import { Outlet } from 'react-router-dom';
+import './App.css';
 
 function App() {
-
-   
   return (
-    <>
-      <SignUpPage></SignUpPage>
-    </>
-  )
+    <div>
+      <Outlet /> {/* Este Outlet renderiza los componentes correspondientes a las rutas */}
+    </div>
+  );
 }
 
-export default App
+export default App;
