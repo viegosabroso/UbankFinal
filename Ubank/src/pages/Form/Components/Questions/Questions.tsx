@@ -1,7 +1,8 @@
 import React from 'react';
 import '../Questions/Question.css';
 import img from '../../../../assets/ilustracionesform6.png';
-import img2 from '../../../../assets/indicator1.png';
+import img1 from'../../../../Assets/indicator1.png';
+
 interface QuestionProps {
   currentNumber: any;  // Ejemplo: "1 of 6"
   text: string;  // El texto de la pregunta
@@ -10,11 +11,11 @@ interface QuestionProps {
   questionIndicator: string;  // Ruta de imagen o ícono para el indicador de pregunta
 }
 
-const Question: React.FC<QuestionProps> = ({ currentNumber, text, instruction, imageSrc, questionIndicator }) => {
+const Question: React.FC<QuestionProps> = ({ currentNumber, text, instruction, questionIndicator }) => {
     return (
         <div className="question-container">
             <div className="question-indicator">
-                <img src={img2} alt="Question Indicator" />
+                <img src={img1} alt="Question Indicator" />
                 <p className="question-number">{currentNumber}</p>
             </div>
             <div className="question-text">
