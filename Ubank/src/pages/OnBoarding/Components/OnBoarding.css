@@ -28,7 +28,7 @@ body {
     width: 100%;  
     max-width: 800px; /* Mantiene un tamaño máximo */
     padding: 16px; 
-    background-color: white;
+    background-color: #F7F7F5;
 }
 
 /* Rectángulo negro superior */
@@ -138,6 +138,12 @@ body {
   }
 
 @media (min-width: 1920px) {
+    .top-rectangle {
+        width: 99px; /* Cambia el tamaño del rectángulo negro */
+        height: 48px;
+        align-self: flex-start; /* Alinea a la izquierda */
+      }
+
     .image-placeholder {
         width: 1088px; /* Nuevo tamaño */
         height: 462px; /* Nuevo tamaño */

@@ -10,18 +10,10 @@ import { transformData } from '../../utils/Transformer';
 const Form: React.FC = () => {
   const [questions, setQuestions] = useState<any[]>([]);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
+  const [optionvalue, setOptionvalue] = useState<any[]>([]);
+  const [selectedAnswer, setSelectedAnswer] = useState<number>(0);
+  const [generalIndex, setGeneralIndex] = useState<number>(1);
 
-  //esto hay q borrarlo y poner las opciones desde la base de datos
-  const options = [
-    { text: 'I have regular income (salary, scholarship, etc.)', icon: '/path/to/icon1.png' },
-    { text: 'I have occasional income (casual work)', icon: '/path/to/icon2.png' },
-    { text: 'I have no income but I want to save', icon: '/path/to/icon3.png' },
-    { text: 'I have no income and I do not want to save', icon: '/path/to/icon4.png' },
-  ];
-
-  // const selectAnswer = (index: number) => {
-  //   setSelectedAnswer(index);
-  // };
 
  useEffect(() => {
     const fetchData = async () => {
@@ -45,23 +37,45 @@ const Form: React.FC = () => {
 
 const optionss = questions.length > 0 ? questions[questionIndex].options: [];
 
-console.log(optionss);
+
 
 const handleNext = () => {
-  if (questionIndex < questions.length - 1) {
-    setQuestionIndex(questionIndex + 1);
+  const selectedAnswervalue = selectedAnswer 
+  const nextquestion = optionss[selectedAnswervalue].next;
+  setQuestionIndex(nextquestion);
+  setGeneralIndex(generalIndex + 1);
+  setSelectedAnswer(0);
+  if(questionIndex === 5){
+    
   }
 };
 
 const handlePrevious = () => {
   if (questionIndex > 0) {
+     
     setQuestionIndex(questionIndex - 1);
     console.log("holaquehace");
     
   }
 };
 
+  const handdleselectedAnswer = (index: any) => {
+    setSelectedAnswer(index);
 
+
+    console.log(optionss[index].next);
+    console.log(optionvalue);
+    setOptionvalue([...optionvalue,optionss[index].value]);
+    console.log(index);
+  };
+
+   {
+    if (generalIndex === 5) {
+    const getnextbutton = document.getElementsByClassName('next')
+    getnextbutton[0].innerHTML = "Finish";
+
+  }
+  }
 
 
   
@@ -69,17 +83,18 @@ const handlePrevious = () => {
     <div>
       <Header />
       {/* //estos props se deben cambiar algunos por la base de datos y otros son de logica*/}
-      <Question
-        currentNumber={"Question " + (questionIndex + 1) + " of " + questions.length}
+      <Question 
+        currentNumber={"Question " + (generalIndex + 0) + " of " + 5}
         text={questions.length > 0 ? questions[questionIndex].text : ""}
         instruction="Select one option"
-        imageSrc="/path/to/questionImage.png"  // Imagen de la esquina superior derecha
+        imageSrc= ""  // Imagen de la esquina superior derecha
         questionIndicator="/path/to/indicator.png"  // Indicador de respuesta
       />
       {/* //estos props se deben cambiar por la base de datos */}
-      <div className="answers">
+      <div className="answers" >
         {optionss.map((option: any, index: number) => (
           <AnswerOption
+            Onselect={() => handdleselectedAnswer(index)}
             key={index}
             text={option.label}
             iconSrc={option.icon}
