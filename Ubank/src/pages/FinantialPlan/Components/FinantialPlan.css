@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #FFFFFF; 
+    background-color: #F7F7F5; 
 }
 
 /* Contenedor principal */
@@ -19,7 +19,7 @@ body {
     width: 100%;  
     height: 100vh; 
     padding: 16px; 
-    background-color: white;
+    background-color: #F7F7F5; 
 }
 
 /* Rectángulo negro superior */
@@ -72,7 +72,7 @@ body {
     width: 291px;
     height: 310px; /* Ajusta el tamaño de la tarjeta */
     border-radius: 24px;
-    background: #ac7373;
+    background: #ffffff;
     position: relative;
     padding: 16px; /* Espaciado interno */
     display: flex;
@@ -95,10 +95,11 @@ body {
 .card-circle {
     width: 100px; /* Ajusta el tamaño según sea necesario */
     height: 100px; /* Ajusta el tamaño según sea necesario */
-    
+    margin: 0 auto;
     border-radius: 50%; /* Hace el círculo */
-    background-color: #C4C4C4; /* Color de fondo por defecto */
-    margin-bottom: 10px; /* Espaciado entre el círculo y el texto */
+    background-color: #8515c5; /* Color de fondo por defecto */
+    margin-bottom: 30px; /* Espaciado entre el círculo y el texto */
+    
 }
 
 /* Texto de la tarjeta */
@@ -109,6 +110,7 @@ body {
     font-weight: 400;
     line-height: 150%; /* 16.5px */
     letter-spacing: -0.121px;
+    margin-top: 80px;
 }
 
 /* Texto adicional */
@@ -119,10 +121,24 @@ body {
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
-    line-height: 170%; /* 22.1px */
+    line-height: 0.1; /* 22.1px */
     letter-spacing: -0.143px;
-    margin-top: 24px; /* Espacio entre las tarjetas y el texto */
+    margin-top: 44px; /* Espacio entre las tarjetas y el texto */
     margin-bottom: 16px; /* Espacio entre el texto y los botones */
+}
+
+/* Texto adicional */
+.contact-text2 {
+    color: #000000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0.1; /* 22.1px */
+    letter-spacing: -0.143px;
+    margin-top: 0px; /* Espacio entre las tarjetas y el texto */
+    margin-bottom: 44px; /* Espacio entre el texto y los botones */
 }
 
 /* Contenedor de botones */
@@ -157,35 +173,55 @@ body {
     color: #FFFFFF; /* Color del texto en el botón */
 }
 
-/* Media Queries para Responsividad */
+/* Responsividad para pantallas más grandes */
+@media (min-width: 1024px) {
+
+    
+    .card-container {
+        flex-direction: row; /* Cambia la dirección a horizontal */
+        justify-content: center; /* Centra las tarjetas */
+        justify-content: center;
+        gap: 32px; /* Espaciado mayor entre tarjetas */
+    }
+
+    .card {
+        width: 300px; /* Ajusta el ancho si es necesario */
+        height: 320px; /* Ajusta la altura si es necesario */
+    }
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
 @media (min-width: 768px) {
     .financial-plan-container {
         padding: 32px;
     }
     
     .subtitle {
-        font-size: 56px; /* Ajusta según sea necesario */
+        font-size: 56px;
     }
     
     .efficient-subtitle {
-        font-size: 36px; /* Ajusta según sea necesario */
-    }
-
-    .card {
-        width: 300px; /* Ajusta el ancho si es necesario */
+        font-size: 36px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1920px) {
     .financial-plan-container {
-        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: flex-start;
+        width: 100%;  
+        height: 100vh; 
+        padding: 16px; 
+        background-color: #F7F7F5; 
     }
-    
+
     .subtitle {
-        font-size: 64px; /* Ajusta según sea necesario */
+        font-size: 64px;
     }
 
     .efficient-subtitle {
-        font-size: 48px; /* Ajusta según sea necesario */
+        font-size: 48px;
     }
 }

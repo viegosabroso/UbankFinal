@@ -1,0 +1,56 @@
+/* Estilos específicos del componente Card */
+
+/* Tarjeta */
+.card {
+    width: 291px;
+    height: 310px;
+    border-radius: 24px;
+    background: #ffffff;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Número en la tarjeta */
+.card-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/* Círculo para imagen */
+.card-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #8515c5;
+    margin-bottom: 30px;
+}
+
+/* Imagen en lugar del círculo */
+.card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al círculo */
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* Texto de la tarjeta */
+.card-text {
+    color: rgba(23, 26, 31, 0.85);
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.121px;
+    margin-top: 80px;
+}
