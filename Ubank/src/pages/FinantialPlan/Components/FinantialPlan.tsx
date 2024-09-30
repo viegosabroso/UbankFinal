@@ -1,12 +1,15 @@
 import React from 'react';
 import './FinantialPlan.css';
 import Card from './Card';
+import { useLocation } from 'react-router-dom';
 
 interface FinantialPlanProps {
   efficientSubtitle: string;
 }
 
 const FinantialPlan: React.FC<FinantialPlanProps> = ({ efficientSubtitle }) => {
+  const location = useLocation();
+  console.log(location.state);
   return (
     <div className="financial-plan-container">
       <div className="top-rectangle"></div> {/* Rectángulo negro superior */}
