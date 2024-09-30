@@ -2,6 +2,7 @@
 .answer-option{
     width: 300px;
     height: 280px;
+    min-height: fit-content;
     background-color: rgb(255, 255, 255);
     border-radius: 31px;
 }
@@ -17,7 +18,7 @@
 .answer-option p{
     font-weight: 500;
     color: #292929;
-    margin-top: 140px;
+    margin-top: 122px;
     padding: 0 28px;
     background:none;
     font-size: 15px;
@@ -25,7 +26,7 @@
     font-weight: 500;
     line-height: 150%; /* 25.5px */
     letter-spacing: -0.187px;
-    width: 80%;
+    width: auto;
 }
 
 .answer-option p:hover{
