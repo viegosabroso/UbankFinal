@@ -8,8 +8,6 @@ export const DataBaseService = () => {
 const getdb = async () =>{
     const getquestions = await getDocs(collection(db, "Questions"));
     const questions = getquestions.docs.map((doc) =>{
-        console.log(doc.data());
-        
 
         return({...doc.data() })
     });

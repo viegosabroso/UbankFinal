@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 export const useForm = () => {
     const [questions, setQuestions] = useState<any[]>([]);
     const [questionIndex, setQuestionIndex] = useState<number>(0);
-    const [optionvalue, setOptionvalue] = useState<any[]>([]);
+    const [optionvalue, setOptionvalue] = useState<any[]>([0]);
     const [selectedAnswer, setSelectedAnswer] = useState<number>(0);
     const [generalIndex, setGeneralIndex] = useState<number>(1);
   
@@ -38,6 +38,12 @@ export const useForm = () => {
   
   
   const handleNext = () => {
+    if(questionIndex === 11 || questionIndex === 10){
+      navigate("/plan", { state: { optionvalue } } )
+    }
+
+    console.log(questionIndex);
+    
     const selectedAnswervalue = selectedAnswer 
     const nextquestion = optionss[selectedAnswervalue].next;
     console.log(optionss);
@@ -48,9 +54,7 @@ export const useForm = () => {
     setSelectedAnswer(0);
     console.log(optionvalue);
     
-    if(questionIndex === 5){
-      navigate("/plan", { state: { optionvalue } } )
-    }
+    
   };
   
   const handlePrevious = () => {
@@ -66,12 +70,11 @@ export const useForm = () => {
     
     
     setSelectedAnswer(index);
-    const alreadyselected = optionss.findIndex((option: any) => option.selected === true);
-    if (alreadyselected >= 0) {
-      optionss[alreadyselected].selected = false;
-    }
-    setOptionvalue(optionss[index].value);
-
+    
+    
+    setOptionvalue([...optionvalue, optionss[index].value]);
+    console.log(optionvalue);
+    
     console.log(index);
 
     
