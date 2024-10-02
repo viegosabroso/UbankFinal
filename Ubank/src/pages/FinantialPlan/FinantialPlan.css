@@ -141,6 +141,10 @@ body {
     margin-bottom: 44px; /* Espacio entre el texto y los botones */
 }
 
+.Container_Text{
+    display: flex;
+    flex-direction: column;
+}
 /* Contenedor de botones */
 .button-container {
     display: flex;
@@ -176,9 +180,12 @@ body {
 /* Responsividad para pantallas más grandes */
 @media (min-width: 1024px) {
 
-    
+    .Container_Text{
+        display: flex;
+        flex-direction: column;
+    }
     .card-container {
-        flex-direction: column; /* Cambia la dirección a horizontal */
+        flex-direction: row; /* Cambia la dirección a horizontal */
         justify-content: center; /* Centra las tarjetas */
         justify-content: center;
         gap: 32px; /* Espaciado mayor entre tarjetas */
@@ -192,6 +199,11 @@ body {
 
 /* Media Queries para diferentes tamaños de pantalla */
 @media (min-width: 768px) {
+
+    .Container_Text{
+        display: flex;
+        flex-direction: column;
+    }
     .financial-plan-container {
         padding: 32px;
     }
@@ -206,6 +218,11 @@ body {
 }
 
 @media (min-width: 1920px) {
+
+    .Container_Text{
+        display: flex;
+        flex-direction: column;
+    }
     .financial-plan-container {
         display: flex;
         flex-direction: column;
