@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { lazy, useEffect, useState } from "react"
 import { transformData } from "../utils/Transformer"
 import { useNavigate, useLocation } from "react-router-dom";
+
 
 
 export const useForm = () => {
@@ -53,17 +54,18 @@ export const useForm = () => {
     setGeneralIndex(generalIndex + 1);
     setSelectedAnswer(0);
     console.log(optionvalue);
-    
+    if (nextquestion === 11 || nextquestion === 10) {
+      const getnextbutton = document.getElementsByClassName('next');
+      if (getnextbutton.length > 0) {
+        getnextbutton[0].innerHTML = "Finish";
+      }
+    }
     
   };
   
   const handlePrevious = () => {
-    if (questionIndex > 0) {
-       
-      setQuestionIndex(generalIndex - 1);
-      console.log("holaquehace");
-      
-    }
+      const prevquestion = questionIndex 
+
   };
   
   const handleselectedAnswer = (index: number) => {
@@ -81,12 +83,7 @@ export const useForm = () => {
     
   };
 
-  if (generalIndex === 5) {
-    const getnextbutton = document.getElementsByClassName('next');
-    if (getnextbutton.length > 0) {
-      getnextbutton[0].innerHTML = "Finish";
-    }
-  }
+ 
   
   return {
     questions,

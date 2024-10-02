@@ -3,7 +3,7 @@ import { DataBaseService } from "../Services/addingdatabase";
 
 const {getdb} = DataBaseService();
 
-export const transformData = async ()=> {
+export const transformData = async()=> {
     try{
 
         const db = await getdb();

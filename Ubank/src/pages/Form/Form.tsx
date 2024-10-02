@@ -1,18 +1,20 @@
 
 import Header from './Components/FormHeader/FormHeader';
 import Question from './Components/Questions/Questions';
-import AnswerOption from './Components/Answers/Answers';
 import NavigationButtons from './Components/NavigationButtons/Navigation';
 import './Form.css';
 import { useForm } from '../../Hooks/FormHooks';
+import { lazy, Suspense } from 'react';
 
 
 const Form: React.FC = () => {
     const { generalIndex, questionIndex, questions, optionss, handleNext, handlePrevious, handleselectedAnswer } = useForm();
-    
+    const Answersoption = lazy(() => import('./Components/Answers/Answers'));
     
     return (
+      
     <div>
+      
       <Header />
       <Question 
         currentNumber={"Question " + (generalIndex + 0)}
@@ -23,13 +25,16 @@ const Form: React.FC = () => {
       />
 
       <div className="answers" >
+        
         {questionIndex < 11 && optionss.map((option: any, index: number) => (
-          <AnswerOption
-            Onselect={() => handleselectedAnswer(index)}
-            key={index}
-            text={option.label}
-            iconSrc={option.icon}
+          <Suspense fallback={<h1>Loading...</h1>}>
+          <Answersoption
+          Onselect={() => handleselectedAnswer(index)}
+          key={index}
+          text={option.label}
+          iconSrc={option.icon}
           />
+          </Suspense>
         ))
         || <input type="text" />
 }
