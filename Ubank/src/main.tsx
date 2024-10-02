@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import FinantialPlan from './pages/FinantialPlan/Components/FinantialPlan.tsx';
+import FinantialPlan from './pages/FinantialPlan/FinantialPlan.tsx';
 import OnBoarding from './pages/OnBoarding/OnBoarding.tsx';
 import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
 import Form from './pages/Form/Form.tsx';
