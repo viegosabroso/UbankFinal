@@ -178,7 +178,7 @@ body {
 
     
     .card-container {
-        flex-direction: row; /* Cambia la dirección a horizontal */
+        flex-direction: column; /* Cambia la dirección a horizontal */
         justify-content: center; /* Centra las tarjetas */
         justify-content: center;
         gap: 32px; /* Espaciado mayor entre tarjetas */

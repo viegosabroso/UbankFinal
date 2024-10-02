@@ -19,8 +19,11 @@ const FinantialPlan = () => {
           {/* Usar el componente Card y pasarle las props dinámicas */}
           
         {/* Texto adicional */}
+        <div className='Container_Text'>
         <p className="contact-text">Do you want to create this plan with us?</p>
         <p className="contact-text2">¡Let us send you an email and let’s get in contact!</p>
+        </div>
+       
 
         {/* Botones */}
         <div className="button-container">
