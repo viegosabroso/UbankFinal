@@ -90,6 +90,7 @@ const LogIn: React.FC = () => {
           </button>
  
           <button 
+            type="submit" 
             className="google-button" 
             onClick={handleGoogleLogin} 
             disabled={loading}>

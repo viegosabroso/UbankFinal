@@ -88,22 +88,25 @@ const SignUp: React.FC = () => {
             value={values.password}
             onChange={handleChange}
           />
+
           <button 
           type="submit" 
           className="sign-up-button" 
           disabled={loading}>
             Sign Up
           </button>
-          <p className="login-link">
-            Do you already have an Account? <Link to="/login">Log In</Link>
-          </p>
 
           <button 
+            type="submit" 
             className="google-button" 
             onClick={handleGoogleSignUp} 
             disabled={loading}>
             Sign Up with Google
           </button>
+
+          <p className="login-link">
+            Do you already have an Account? <Link to="/login">Log In</Link>
+          </p>
         
         </form>
       </div>
