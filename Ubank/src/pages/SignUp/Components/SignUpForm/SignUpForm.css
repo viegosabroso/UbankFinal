@@ -81,10 +81,9 @@
 
   .desktop-logo {
     display: block;
-    width: 70px;  
+    width: 65px;  
     margin-left: 345px; 
-    margin-bottom: 1rem;
-  }
+  } 
   
   .right-panel h2 {
     color: #333;
