@@ -3,6 +3,7 @@ import InputForm from "../SignUp/Components/InputForm/InputForm";
 import useAuth from "../../Hooks/UseAuth"; 
 import { useNavigate, Link } from 'react-router-dom'; 
 import toast from "react-hot-toast";
+import '../SignUp/Components/SignUpForm/SignUpForm.css'
 
 const LogIn: React.FC = () => {
   const { login, loginWithGoogle } = useAuth(); 
