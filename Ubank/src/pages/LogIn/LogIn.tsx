@@ -6,13 +6,13 @@ import toast from "react-hot-toast";
 
 
 const LogIn: React.FC = () => {
-  const { login } = useAuth(); // Extrae la función de login del hook
+  const { login } = useAuth(); 
   const [values, setValues] = useState({
     email: "",
     password: ""
   });
-  const [loading, setLoading] = useState(false); // Estado para manejar el loading
-  const navigate = useNavigate(); // Inicializa el hook para la navegación
+  const [loading, setLoading] = useState(false); 
+  const navigate = useNavigate(); 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
@@ -29,9 +29,8 @@ const LogIn: React.FC = () => {
       await login(values.email, values.password);
       navigate("/dashboard");
     } catch (error:any) {
-        toast.error("Error al iniciar sesión. Verifique sus credenciales."); //agregar otros tipos de error como contraseña incorrecta
-        setLoading(false); // Asegura que el loading se detenga
-    
+        toast.error("Error al iniciar sesión. Verifique sus credenciales."); 
+        setLoading(false); 
     } 
   };
 
@@ -82,4 +81,3 @@ const LogIn: React.FC = () => {
 };
 
 export default LogIn;
-

@@ -1,7 +1,7 @@
 import React, { useState,  } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../../../Hooks/UseAuth";
-import InputForm from "../InputForm/InputForm";  // Importa el componente InputForm
+import InputForm from "../InputForm/InputForm"; 
 import './SignUpForm.css'
 
 const SignUp: React.FC = () => {
