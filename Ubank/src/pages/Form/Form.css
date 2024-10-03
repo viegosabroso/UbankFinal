@@ -96,4 +96,10 @@
         padding: 0 10px; /* Ajusta el padding del input */
         font-size: 14px; /* Ajusta el tamaño del texto */
     }
+
+    .checkbox-answer {
+        width: 155%; /* Ajusta el ancho del contenedor del checkbox */
+        height: 65px; /* Ajusta la altura del contenedor del checkbox */
+        margin: 10px 0; /* Ajusta el margen entre contenedores */
+    }
 }
