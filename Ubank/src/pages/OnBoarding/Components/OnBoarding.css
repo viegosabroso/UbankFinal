@@ -1,15 +1,30 @@
-/* Estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #FFFFFF; 
+    background-color: #F7F7F5; 
 }
 
+.pig{
+   position: absolute;
+   top: 40;
+}
+
+.coin{
+    position: absolute;
+}
+
+.wallet{
+    position: absolute;
+}
+
+.coin{
+    position: absolute;
+}
+
+.question{
+    position: absolute;
+}
 /* Nuevo contenedor padre */
 .flex-container {
     display: flex; /* Establece el contenedor como flex */
@@ -31,13 +46,6 @@ body {
     background-color: #F7F7F5;
 }
 
-/* Rectángulo negro superior */
-.top-rectangle {
-    width: 100%;
-    height: 80px;
-    background-color: #000;
-    margin-bottom: 24px;
-}
 
 /* Contenido principal */
 .content {
@@ -48,13 +56,16 @@ body {
     width: 100%;
     max-width: 400px; 
     padding: 16px;
+    margin-top: 12px;
 }
 
-.image-placeholder {
-    width: 352px;
-    height: 352px;
-    background-color: #C4C4C4;
-    margin-bottom: 24px;
+.content img{
+    width: 250.99px;
+    height: 250px;
+    margin-bottom: 70px;
+    margin-left: 60px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Subtítulo */
@@ -62,29 +73,31 @@ body {
     color: #1F1E30;
     text-align: center;
     font-size: 28px; 
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
+    width: 500px;
 }
 
 /* Texto descriptivo */
 .body-text {
-    width: 100%;
+    width: 500px;
     color: #000;
     text-align: center;
-    font-size: 14px;
     line-height: 1.6;
+    font-size: 15px;
     margin-bottom: 32px;
 }
 
 /* Botón CTA */
 .cta-button {
-    width: 160px;
+    width: 150px;
     height: 45px;
     background-color: #8644DB;
     color: white;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 30px;
     border: none;
     border-radius: 14px;
     cursor: pointer;
@@ -95,84 +108,3 @@ body {
     background-color: #7A3CC8;
 }
 
-/* Media Queries para pantallas más grandes */
-@media (min-width: 768px) {
-    .onboarding-container {
-        padding: 32px;
-    }
-    
-    .subtitle {
-        font-size: 32px; /* Más grande en pantallas grandes */
-    }
-    
-    .body-text {
-        font-size: 16px;
-    }
-    
-    .cta-button {
-        width: 180px;
-        height: 50px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .onboarding-container {
-        max-width: 800px;
-    }
-    
-    .subtitle {
-        font-size: 36px;
-    }
-    
-    .body-text {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1027px) {
-    .top-rectangle {
-      width: 99px; /* Cambia el tamaño del rectángulo negro */
-      height: 48px;
-      align-self: flex-start; /* Alinea a la izquierda */
-    }
-  }
-
-@media (min-width: 1920px) {
-    .top-rectangle {
-        width: 99px; /* Cambia el tamaño del rectángulo negro */
-        height: 48px;
-        align-self: flex-start; /* Alinea a la izquierda */
-      }
-
-    .image-placeholder {
-        width: 1088px; /* Nuevo tamaño */
-        height: 462px; /* Nuevo tamaño */
-    }
-
-    .subtitle {
-        font-size: 48px; /* Nuevo tamaño */
-    }
-
-    .body-text {
-        color: #2D2D2D;
-        text-align: center;
-        font-family: Poppins;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; /* 25.5px */
-        letter-spacing: -0.187px;
-        width: 633px; /* Nuevo tamaño */
-    }
-
-    .cta-button {
-        display: flex;
-        width: 130px; /* Nuevo tamaño */
-        height: 48px; /* Nuevo tamaño */
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0; /* No se reducirá el tamaño */
-    }
-}

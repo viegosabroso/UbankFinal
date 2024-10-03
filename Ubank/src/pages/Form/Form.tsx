@@ -4,6 +4,7 @@ import NavigationButtons from './Components/NavigationButtons/Navigation';
 import './Form.css';
 import { useForm } from '../../Hooks/FormHooks';
 import AnswerOption from './Components/Answers/Answers';
+import { Toaster } from 'react-hot-toast';
 
 // Componente para renderizar opciones de tipo checkbox
 const CheckboxAnswerOption: React.FC<{ text: string, isSelected: boolean, onChange: () => void }> = ({ text, isSelected, onChange }) => {
@@ -44,6 +45,7 @@ const Form: React.FC = () => {
 
   return (
     <div>
+      <Toaster position="top-center" reverseOrder={false}/>
       <Header />
       <Question 
         currentNumber={"Question " + (generalIndex + 0)}

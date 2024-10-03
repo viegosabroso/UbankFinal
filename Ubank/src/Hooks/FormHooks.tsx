@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { transformData } from "../utils/Transformer";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from 'react-hot-toast';
 
 export const useForm = () => {
     const [questions, setQuestions] = useState<any[]>([]);
@@ -37,7 +37,8 @@ export const useForm = () => {
           // Para la pregunta con selección múltiple
           const selectedOptions = Array.isArray(selectedAnswer) ? selectedAnswer : [];
           if (selectedOptions.length === 0) {
-              alert("Debes seleccionar al menos una respuesta para poder avanzar."); // Alerta en lugar de toast
+              // Mostrar notificación si no hay opción seleccionada
+              toast.error('You must select at least one answer to proceed.');
               return;
           }
   
@@ -50,7 +51,8 @@ export const useForm = () => {
           // Lógica para selección única
           const selectedAnswervalue = selectedAnswer;
           if (selectedAnswervalue === null || Array.isArray(selectedAnswervalue)) {
-              alert("Debes seleccionar una respuesta para poder avanzar."); // Alerta en lugar de toast
+              // Mostrar notificación si no hay opción seleccionada
+              toast.error('You must select at least one answer to proceed.');
               return;
           }
   
