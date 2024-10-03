@@ -156,17 +156,38 @@
     color: #555;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 440px) {
     .sign-up-container {
-      flex-direction: column;
+      margin-top: -95px;
+      width: 100%; 
+      height: 600px; 
+      border-radius: 20px; 
     }
   
     .left-panel {
       display: none; 
     }
   
-    .right-panel {
-      width: 100%;
-      padding: 2rem;
+    .right-panel h2 {
+      font-size: 24px; 
+      line-height: 1.2; 
+    }
+  
+    .right-panel p {
+      font-size: 14px; 
+    }
+  
+    .input-field input {
+      font-size: 14px; 
+      padding: 0.5rem; 
+    }
+  
+    .sign-up-button {
+      padding: 0.8rem; 
+      font-size: 14px; 
+    }
+  
+    .login-link {
+      font-size: 12px; 
     }
   }
