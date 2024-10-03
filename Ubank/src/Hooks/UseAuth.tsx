@@ -43,8 +43,7 @@ const useAuth = (): UseAuth => {
         email,
       });
     } catch (error) {
-      console.error("Error al iniciar sesión: ", error);
-      throw new Error("Error al iniciar sesión");
+      handleAuthError(error);
     }
   };
 
@@ -53,8 +52,7 @@ const useAuth = (): UseAuth => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      console.error("Error al iniciar sesión: ", error);
-      throw new Error("Error al iniciar sesión");
+      handleAuthError(error);
     }
   };
 
@@ -88,6 +86,41 @@ const useAuth = (): UseAuth => {
     }
   };
 
+  const handleAuthError = (error: any) => {
+  let errorMessage = "Error desconocido. Intente nuevamente.";
+  if (error.code) {
+    switch (error.code) {
+      case 'auth/wrong-password':
+        errorMessage = "Contraseña incorrecta. Por favor, verifique sus credenciales.";
+        break;
+      case 'auth/user-not-found':
+        errorMessage = "Usuario no encontrado. Verifique su email.";
+        break;
+      case 'auth/too-many-requests':
+        errorMessage = "Demasiados intentos fallidos. Por favor, intente más tarde.";
+        break;
+      case 'auth/invalid-credential':
+        errorMessage = "Las credenciales son inválidas. Asegúrese de que su email y contraseña sean correctos.";
+        break;
+      case 'auth/email-already-in-use':
+        errorMessage = "El correo electrónico ya está en uso. Intente con otro.";
+        break;
+      case 'auth/invalid-email':
+        errorMessage = "El correo electrónico no es válido. Por favor, verifique.";
+        break;
+      case 'auth/operation-not-allowed':
+        errorMessage = "El registro con correo electrónico está deshabilitado. Por favor, contacte al soporte.";
+        break;
+      case 'auth/weak-password':
+        errorMessage = "La contraseña es muy débil. Intente con una contraseña más fuerte.";
+        break;
+      default:
+        errorMessage = "Error al iniciar sesión. Intente nuevamente.";
+        break;
+    }
+  }
+  throw new Error(errorMessage); // Lanza un error con el mensaje correspondiente
+};
 
   return {
     currentUser,
