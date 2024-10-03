@@ -99,9 +99,6 @@ const SignUp: React.FC = () => {
           disabled={loading}>
             Sign Up
           </button>
-          <p className="login-link">
-            Do you already have an Account? <Link to="/login">Log In</Link>
-          </p>
 
           <button 
             className="sign-up-button" 
@@ -109,6 +106,12 @@ const SignUp: React.FC = () => {
             disabled={loading}>
             Sign Up with Google
           </button>
+          
+          <p className="login-link">
+            Do you already have an Account? <Link to="/login">Log In</Link>
+          </p>
+
+          
         
         </form>
       </div>

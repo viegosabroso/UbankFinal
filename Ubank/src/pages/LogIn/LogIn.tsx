@@ -90,17 +90,20 @@ const LogIn: React.FC = () => {
             disabled={loading}>
             Log In
           </button>
-        <p className="login-link">
-          Don't have an account? <Link to="/">Create one</Link>
-        </p>
 
-         
-        <button 
+          <button 
             className="sign-up-button" 
             onClick={handleGoogleLogin} 
             disabled={loading}>
             Log In with Google
           </button>
+          
+        <p className="login-link">
+          Don't have an account? <Link to="/">Create one</Link>
+        </p>
+
+         
+        
 
         </form>
       </div>

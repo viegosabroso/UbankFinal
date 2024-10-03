@@ -1,51 +1,78 @@
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db, auth } from "../../Clients/firebase";
-import { signOut, getAuth, onAuthStateChanged } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import './Dashboard.css'
 
 const Dashboard: React.FC = () => {
   const [username, setUsername] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
+  const [isLoggingOut, setIsLoggingOut] = useState<boolean>(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      setLoading(true); 
       if (user) {
-        // El usuario está logueado, obtenemos los datos
-        const userDoc = await getDoc(doc(db, "users", user.uid));
-        if (userDoc.exists()) {
-          setUsername(userDoc.data()?.username || "");
+        
+        try {
+          const userDoc = await getDoc(doc(db, "users", user.uid));
+          if (userDoc.exists()) {
+            setUsername(userDoc.data()?.username || "");
+          }
+        } catch (error) {
+          console.error("Error al obtener los datos del usuario: ", error);
+          toast.error("Error al obtener los datos del usuario.");
+        } finally {
+          setLoading(false); 
         }
       } else {
-        // El usuario no está logueado, redirigimos y mostramos un toast
-        toast.success("finalizó su sesion exitosamente");
-        navigate("/"); // Redirigir a la página de login
+        
+        setLoading(false); 
+        if (!isLoggingOut) { 
+          toast.error("Debe iniciar sesión para acceder al dashboard.");
+        }
+        navigate("/login");
       }
     });
 
-    return () => unsubscribe(); // Limpiar suscripción
-  }, [navigate]);
+    return () => unsubscribe(); 
+  }, [navigate, isLoggingOut]);
 
-  // Función de logout
+  
   const handleLogout = async () => {
+    setIsLoggingOut(true); 
     try {
-      await signOut(auth); // Desloguear de Firebase
-      navigate("/"); // Redirigir al Sign Up o página principal
+      await signOut(auth);
+      toast.success("Finalizó su sesión exitosamente.");
+      navigate("/login");
     } catch (error) {
-      console.error("Error logging out: ", error);
+      console.error("Error al cerrar sesión: ", error);
+      toast.error("Error al cerrar sesión.");
+    } finally {
+      setIsLoggingOut(false);
     }
   };
 
+  if (loading) {
+    return <div>Loading...</div>; 
+  }
+
   return (
     <div>
-      <Toaster /> {/* Componente de react-hot-toast para mostrar los mensajes */}
-      <h2>Welcome, {username}</h2>
-      <button onClick={handleLogout}>Logout</button>
+      <h2
+      className="welcome-user">
+        Welcome, {username} 🌷͙֒🎀
+      </h2>
+      <button 
+      className="log-out-button"
+      onClick={handleLogout}>Logout</button>
     </div>
   );
 };
 
 export default Dashboard;
+
 
