@@ -159,6 +159,7 @@ body {
     gap: 10px;
     border-radius: 8px; /* Ajusta el radio del borde si es necesario */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none;
 }
 
 /* Botón gris */

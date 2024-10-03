@@ -1,6 +1,6 @@
-import { lazy, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { transformData } from "../utils/Transformer"
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
