@@ -16,6 +16,7 @@ const OnBoarding: React.FC = () => {
         <img src={img3} alt="calculator" className='calculator' />
         <img src={img2} alt="coin" className='coin'/>
         <img src={img5} alt="question-mark" className='question'/>
+        <img src={img5} alt="question-mark" className='question-two'/>
         <img src={img6} alt="wallet" className='wallet'/>
       <div className="onboarding-container">
         

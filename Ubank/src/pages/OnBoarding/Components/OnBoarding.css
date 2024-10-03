@@ -6,24 +6,75 @@ body {
 }
 
 .pig{
-   position: absolute;
-   top: 40;
+    position: absolute;
+    width: 67.3px;
+    height: 91.03px;
+    top: 323px;
+    left: 228.32px;
+    gap: 0px;
+    opacity: 0px;
+    angle: -14.19 deg;
+
 }
 
 .coin{
     position: absolute;
+    width: 46.82px;
+    height: 42.01px;
+    top: 425px;
+    left: 1227.57px;
+    gap: 0px;
+    opacity: 0px;
+    angle: -49.28 deg;
+
 }
 
 .wallet{
     position: absolute;
+    width: 97.32px;
+    height: 73.91px;
+    top: 125px;
+    left: 1166.18px;
+    gap: 0px;
+    opacity: 0px;
+    angle: -24.18 deg;
+
 }
 
-.coin{
+.calculator{
     position: absolute;
+    width: 84.46px;
+    height: 82.81px;
+    top: 76px;
+    left: 424.82px;
+    gap: 0px;
+    opacity: 0px;
+    angle: -10.68 deg;
+
 }
 
 .question{
     position: absolute;
+    width: 60px;
+    height: 66.11px;
+    top: 270.14px;
+    left: 419.99px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.question-two{
+    position: absolute;
+    width: 50.15px;
+    height: 56.76px;
+    top: 312px;
+    left: 1052.69px;
+    gap: 0px;
+    opacity: 0px;
+    transform: rotate(65deg); /* Rota la imagen 45 grados */
+
+
+
 }
 /* Nuevo contenedor padre */
 .flex-container {
@@ -106,5 +157,104 @@ body {
 
 .cta-button:hover {
     background-color: #7A3CC8;
+}
+
+@media (max-width: 480px){
+    .subtitle {
+        font-size: 26px;
+        width: 90%;
+    }
+
+    .body-text {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .cta-button {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .content img{
+        width: 180.99px;
+        height: 180px;
+        margin-bottom: 70px;
+        margin-left: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pig{
+        position: absolute;
+        width: 60.3px;
+        height: 75.03px;
+        top: 223px;
+        left: 28.32px;
+        gap: 0px;
+        opacity: 0px;
+        angle: -14.19 deg;
+    
+    }
+    
+    .coin{
+        position: absolute;
+        width: 26.82px;
+        height: 22.01px;
+        top: 385px;
+        left: 337.57px;
+        gap: 0px;
+        opacity: 0px;
+        angle: -49.28 deg;
+    
+    }
+    
+    .wallet{
+        position: absolute;
+        width: 55.85px;
+        height: 51.69px;
+        top: 125px;
+        left: 283.57px;
+        gap: 0px;
+        opacity: 0px;
+        angle: -24.18 deg;
+
+    
+    }
+    
+    .calculator{
+        position: absolute;
+        width: 50.55px;
+        height: 59.76px;
+        top: 118px;
+        left: 123.37px;
+        gap: 0px;
+        opacity: 0px;
+        angle: -10.68 deg;
+    }
+    
+    .question{
+        position: absolute;
+        width: 30px;
+        height: 36.11px;
+        top: 270.14px;
+        left: 339.99px;
+        gap: 0px;
+        opacity: 0px;
+    }
+    
+    .question-two{
+        position: absolute;
+        width: 50.15px;
+        height: 56.76px;
+        top: 342px;
+        left: 52.69px;
+        gap: 0px;
+        opacity: 0px;
+        transform: rotate(65deg); /* Rota la imagen 45 grados */
+    
+    
+    
+}
 }
 
