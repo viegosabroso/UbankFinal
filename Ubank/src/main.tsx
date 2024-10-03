@@ -10,7 +10,9 @@ import './Clients/firebase.ts'
 import './index.css'
 
 createRoot(document.getElementById('root')!).render(
+    <>
+    <RouterProvider router={router}/> <Toaster />
+    </>
   
-    <RouterProvider router={router}/>
 
 )
