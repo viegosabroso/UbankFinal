@@ -50,7 +50,7 @@
 @media (max-width: 480px) {
     .question-text h2{
         font-size: 30px;
-        width: 100%;
+        width: 90%;
         line-height: 40px;
     }
     .question-text img{

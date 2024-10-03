@@ -37,7 +37,7 @@ const Form: React.FC = () => {
           />
           
         ))
-        || <input type="text" />
+        || <input type="text" className='text-imput' placeholder='Type your other concerns here'/>
 }
       </div>
       <NavigationButtons Plusindex={handleNext} Minusindex={handlePrevious}></NavigationButtons>

@@ -7,11 +7,33 @@
     justify-content: center;
 }
 
+.text-imput{
+    width: 60%;
+    height: 100px;
+    border-radius: 31px;
+    background-color: #FFFFFF;
+    border: 1px solid #D7F177;
+    padding: 0 20px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.187px;
+    color: #292929;
+}
+
 @media (max-width: 480px) {
     .answers {
         flex-direction: column; /* Apila las tarjetas verticalmente en móviles */
         gap: 20px; /* Ajusta el espacio entre tarjetas */
         align-items: center;
         margin-top: 30px;
+    }
+
+    .text-imput {
+        width: 80%; /* Ajusta el ancho del input */
+        height: 80px; /* Ajusta la altura del input */
+        padding: 0 10px; /* Ajusta el padding del input */
+        font-size: 14px; /* Ajusta el tamaño del texto */
     }
 }
