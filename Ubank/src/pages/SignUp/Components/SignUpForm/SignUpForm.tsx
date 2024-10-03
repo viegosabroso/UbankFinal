@@ -48,6 +48,10 @@ const SignUp: React.FC = () => {
   };
 
   return (
+    <>
+    <div className="container-responsive-logo">
+    <img className="responsive-logo" src="./src/assets/UB-logo.webp" alt="" />
+    </div>
     <div className="sign-up-container">
       <div className="left-panel">
         <h2>
@@ -73,14 +77,14 @@ const SignUp: React.FC = () => {
             name="fullName"
             value={values.fullName}
             onChange={handleChange}
-          />
+            />
           <InputForm
             placeholder="example@gmail.com"
             label="Email Address"
             name="email"
             value={values.email}
             onChange={handleChange}
-          />
+            />
           <InputForm
             placeholder="*******"
             label="Password"
@@ -88,7 +92,7 @@ const SignUp: React.FC = () => {
             type="password"
             value={values.password}
             onChange={handleChange}
-          />
+            />
           <button 
           type="submit" 
           className="sign-up-button" 
@@ -109,6 +113,7 @@ const SignUp: React.FC = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

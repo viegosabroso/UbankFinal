@@ -167,7 +167,23 @@
     color: #555;
   }
 
+  .container-responsive-logo{
+    margin-top: 20px;
+  }
+
+  .responsive-logo {
+    position: fixed;
+    top: 110px;
+    left: 45px;
+    display: none; 
+    width: 35px;
+  }
+
   @media (max-width: 440px) {
+      .responsive-logo {
+        display: block; 
+      }
+
     body{
       background-color: #ffffff;
     }

@@ -49,7 +49,11 @@ const LogIn: React.FC = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <>
+        <div className="container-responsive-logo">
+    <img className="responsive-logo" src="./src/assets/UB-logo.webp" alt="" />
+    </div>
+        <div className="sign-up-container">
       <div className="left-panel">
         <h2>
           It's time to take control of <span className="ubank">your finances!</span>💰
@@ -104,6 +108,7 @@ const LogIn: React.FC = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
