@@ -58,6 +58,7 @@ const SignUp: React.FC = () => {
         </div>
       </div>
       <div className="right-panel">
+      <img className="desktop-logo" src="./src/assets/UBank-LogoCompleto.webp" alt="" />
         <h2>
           Create <span className="highlight">Account</span>
         </h2>

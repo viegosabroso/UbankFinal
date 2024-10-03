@@ -59,6 +59,7 @@ const LogIn: React.FC = () => {
         </div>
       </div>
       <div className="right-panel">
+        <img className="desktop-logo" src="./src/assets/UBank-LogoCompleto.webp" alt="" />
         <h2>
           Welcome <span className="highlight">back!</span>
         </h2>
