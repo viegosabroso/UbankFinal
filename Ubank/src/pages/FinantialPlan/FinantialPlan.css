@@ -31,7 +31,7 @@ body {
 }
 
 /* Contenido principal */
-.content {
+.ob-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,6 +40,8 @@ body {
     max-width: 400px; 
     padding: 16px;
 }
+
+
 
 /* Subtítulo */
 .subtitle {
@@ -65,6 +67,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px; /* Espaciado entre tarjetas */
+    margin-top: 50px;
 }
 
 /* Tarjeta */
@@ -79,6 +82,8 @@ body {
     flex-direction: column;
 }
 
+
+
 /* Número en la tarjeta */
 .card-number {
     position: absolute;
@@ -91,16 +96,6 @@ body {
     line-height: 150%; /* 16.5px */
 }
 
-/* Círculo para imagen */
-.card-circle {
-    width: 100px; /* Ajusta el tamaño según sea necesario */
-    height: 100px; /* Ajusta el tamaño según sea necesario */
-    margin: 0 auto;
-    border-radius: 50%; /* Hace el círculo */
-    background-color: #8515c5; /* Color de fondo por defecto */
-    margin-bottom: 30px; /* Espaciado entre el círculo y el texto */
-    
-}
 
 /* Texto de la tarjeta */
 .card-text {
