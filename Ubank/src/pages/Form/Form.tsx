@@ -5,7 +5,7 @@ import NavigationButtons from './Components/NavigationButtons/Navigation';
 import './Form.css';
 import { useForm } from '../../Hooks/FormHooks';
 import { lazy, Suspense } from 'react';
-
+import AnswerOption from './Components/Answers/Answers';
 
 const Form: React.FC = () => {
     const { generalIndex, questionIndex, questions, optionss, handleNext, handlePrevious, handleselectedAnswer } = useForm();
@@ -27,14 +27,14 @@ const Form: React.FC = () => {
       <div className="answers" >
         
         {questionIndex < 11 && optionss.map((option: any, index: number) => (
-          <Suspense fallback={<h1>Loading...</h1>}>
-          <Answersoption
+          
+          <AnswerOption
           Onselect={() => handleselectedAnswer(index)}
           key={index}
           text={option.label}
           iconSrc={option.icon}
           />
-          </Suspense>
+          
         ))
         || <input type="text" />
 }

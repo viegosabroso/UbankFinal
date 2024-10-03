@@ -64,8 +64,11 @@ export const useForm = () => {
   };
   
   const handlePrevious = () => {
-      const prevquestion = questionIndex 
-
+      setGeneralIndex(0);
+      setQuestionIndex(0);
+      setSelectedAnswer(0);
+      setOptionvalue([]);
+      console.log(optionvalue);
   };
   
   const handleselectedAnswer = (index: number) => {
