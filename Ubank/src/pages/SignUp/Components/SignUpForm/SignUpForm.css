@@ -5,7 +5,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
@@ -55,10 +55,8 @@
     font-weight: bold;
   }
   
-  .left-panel .illustration {
-    width: 150px;
-    height: 150px;
-    background: url('/path-to-your-image.png') center/contain no-repeat;
+  .illustration {
+    width: 250px;
   }
   
   /* Right panel (form) */

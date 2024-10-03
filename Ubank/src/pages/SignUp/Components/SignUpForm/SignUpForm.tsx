@@ -39,8 +39,8 @@ const SignUp: React.FC = () => {
         <h2>
           Grow your money with <span className="ubank">UBank!</span> 🚀
         </h2>
-        <div className="illustration">
-          <img src="" alt="Illustration" />
+        <div>
+          <img className="illustration" src="./src/assets/Pig.webp" alt="Illustration" />
         </div>
       </div>
       <div className="right-panel">
