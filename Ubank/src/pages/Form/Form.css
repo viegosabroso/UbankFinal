@@ -22,26 +22,64 @@
     color: #292929;
 }
 
+
+/* Estilo para el contenedor de checkboxes */
+.checkbox-container {
+    display: flex; /* Asegurarse de que sea un contenedor flex */
+    flex-direction: column; /* Alinear las opciones verticalmente */
+    gap: 10px; /* Espaciado entre las opciones */
+    align-items: center; /* Alinear las opciones al centro */
+    justify-self: center;
+    margin-top: 30px;
+    
+}
+
+/* Estilos para el contenedor del checkbox */
 .checkbox-answer {
-    display: flex; /* Utiliza flexbox para alinear el checkbox y el texto */
-    align-items: center; /* Centra verticalmente */
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 30px; /* Espaciado entre checkboxes */
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 14px;
+    width: 918px;
+    height: 67px;
 }
 
-/* Estilos para el label del checkbox */
-.checkbox-answer label {
-    cursor: pointer; /* Cambia el cursor al pasar por encima del label */
+.checkbox-answer:hover {
+    border: 1px solid #D7F177;
 }
 
-/* Estilos para el input tipo checkbox */
+/* Oculta el checkbox original */
 .checkbox-answer input[type="checkbox"] {
-    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+    display: none; /* Ocultar el checkbox original */
 }
 
-/* Agrega un color de fondo o un cambio de color al seleccionar */
-.checkbox-answer input[type="checkbox"]:checked + span {
-    color: green; /* Cambia el color del texto cuando está seleccionado */
-    font-weight: bold; /* Opcional: resalta el texto */
+
+/* Estilo para el texto */
+.checkbox-answer span {
+    font-size: 14px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    background-color: #FFFFFF;
+    width: 100%;
 }
+
+.checkbox-answer label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
 
 @media (max-width: 480px) {
     .answers {

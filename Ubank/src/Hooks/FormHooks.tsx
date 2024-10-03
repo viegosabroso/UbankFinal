@@ -38,7 +38,7 @@ export const useForm = () => {
             if (selectedOptions.length === 0) return;
 
             // Lógica para avanzar, por ejemplo, avanzando según la primera opción seleccionada
-            const nextquestion = optionss[0].next;
+            const nextquestion = optionss[0].next; // O puedes modificar esto si deseas avanzar de otra manera
             setQuestionIndex(nextquestion);
             setGeneralIndex(generalIndex + 1);
             setSelectedAnswer(null); // Reiniciar selección
@@ -68,19 +68,21 @@ export const useForm = () => {
                 if (selectedAnswer.includes(index)) {
                     // Deselecciona si ya estaba seleccionado
                     setSelectedAnswer(selectedAnswer.filter((i) => i !== index));
+                    setOptionvalue(optionvalue.filter((value) => value !== optionss[index].value)); // Eliminar el valor
                 } else {
                     // Añadir opción seleccionada
                     setSelectedAnswer([...selectedAnswer, index]);
+                    setOptionvalue([...optionvalue, optionss[index].value]); // Añadir el valor
                 }
             } else {
                 setSelectedAnswer([index]); // Inicializa como array si es la primera selección
+                setOptionvalue([...optionvalue, optionss[index].value]); // Añadir el valor
             }
         } else {
             // Lógica para selección única
             setSelectedAnswer(index);
+            setOptionvalue([...optionvalue, optionss[index].value]); // Añadir el valor
         }
-
-        setOptionvalue([...optionvalue, optionss[index].value]);
     };
 
     return {
@@ -95,4 +97,5 @@ export const useForm = () => {
         generalIndex,
     };
 };
+
 
