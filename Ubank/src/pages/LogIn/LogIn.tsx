@@ -88,9 +88,9 @@ const LogIn: React.FC = () => {
             disabled={loading}>
             Log In
           </button>
-
+ 
           <button 
-            className="google-login-button" 
+            className="google-button" 
             onClick={handleGoogleLogin} 
             disabled={loading}>
             Log In with Google

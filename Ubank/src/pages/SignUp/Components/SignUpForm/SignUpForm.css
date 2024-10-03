@@ -25,7 +25,7 @@
   .sign-up-container {
     display: flex;
     width: 990px;
-    height: 600px;
+    height: 100%;
     background-color: #fff;
     border-radius: 38px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -139,17 +139,22 @@
   .sign-up-button {
     background-color: #8644DB;
     color: white;
-    padding: 1rem;
+    padding: 0.75rem;
     border: none;
     border-radius: 40px;
     font-size: 16px;
     font-family: 'Poppins';
     cursor: pointer;
   }
+
+  .sign-up-button:hover {
+    background-color: #6E35B8; 
+    color: #FFF; 
+}
   
   /* Login link */
   .login-link {
-    padding-top: 25px;
+    padding-top: 5px;
     text-align: center;
     font-size: 14px;
     color: #555;
