@@ -8,7 +8,7 @@ interface NavigationProps {
 const NavigationButtons: React.FC<NavigationProps> = ({ Plusindex, Minusindex }) => {
     return (
         <div className='buttons-container'>
-            <button className='back' onClick={Minusindex}>Back</button>
+            <button className='back' onClick={Minusindex}>Restart</button>
             <button className='next' onClick={Plusindex}>Next</button>
         </div>
     );

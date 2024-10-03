@@ -17,6 +17,8 @@ const location = useLocation();
 
   
   useEffect(() => {
+    console.log("Options value:", optionsvalue);
+    
     const fetchData = async () => {
       try {
         const data = await getdbPlans();

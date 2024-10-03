@@ -9,7 +9,7 @@ interface AnswerOptionProps {
 }
 
 //aqui debe haber un map de esta respuesta para que se muestren todas las opciones desde firebase
-const AnswerOption: React.FC<AnswerOptionProps> = ({ text, iconSrc, Onselect, isSelected }) => {
+const AnswerOption: React.FC<AnswerOptionProps> = ({ text, Onselect, isSelected }) => {
     return (
         <div 
             className={`answer-option ${isSelected ? 'selected' : ''}`} 

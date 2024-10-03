@@ -11,7 +11,7 @@ interface QuestionProps {
   questionIndicator: string;  // Ruta de imagen o ícono para el indicador de pregunta
 }
 
-const Question: React.FC<QuestionProps> = ({ currentNumber, text, instruction, questionIndicator }) => {
+const Question: React.FC<QuestionProps> = ({ currentNumber, text, instruction }) => {
     return (
         <div className="question-container">
             <div className="question-indicator">

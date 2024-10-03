@@ -2,10 +2,12 @@
 import './FinantialPlan.css';
 import Card from './Components/cards/Card';
 import { Planshooks } from '../../Hooks/Planshooks';
+import { useNavigate } from 'react-router-dom';
+ 
 
 const FinantialPlan = () => {
   const { title, filteredPlans } = Planshooks();
-
+  const navigate = useNavigate();
   return (
     <div className="financial-plan-container">
       <div className="top-rectangle"></div> {/* Rectángulo negro superior */}
@@ -27,7 +29,7 @@ const FinantialPlan = () => {
 
 
           <div className="button-container">
-            <button className="button gray-button">Restart</button>
+            <button className="button gray-button" onClick={()=> navigate('/form')}>Restart</button>
             <button className="button colored-button">Send Email</button>
           </div>
         </div>
