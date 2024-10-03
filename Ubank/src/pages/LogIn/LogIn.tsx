@@ -69,9 +69,11 @@ const LogIn: React.FC = () => {
             value={values.password}
             onChange={handleChange}
           />
-          <button type="submit" className="sign-up-button" disabled={loading}>
-            {loading ? "Logging in..." : "Log In"}
+          <button type="submit" className="sign-up-button" >
+            Log In
           </button>
+
+          
         </form>
         <p className="login-link">
           Don't have an account? <Link to="/">Create one</Link>
