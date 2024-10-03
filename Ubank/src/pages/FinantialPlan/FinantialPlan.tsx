@@ -15,11 +15,16 @@ const FinantialPlan = () => {
         <h2 className="<efficient-subtitle">{title}</h2> {/* Display the most frequent plan */}
         
         <div className="card-container">
+
           {filteredPlans.map((description: any, index: number) => (
             <Card key={index} number={index + 1} text={description} />
           ))}
-          <p className="contact-text">Do you want to create this plan with us?</p>
-          <p className="contact-text2">Let us send you an email and let’s get in contact!</p>
+        {/* Texto adicional */}
+        <div className='Container_Text'>
+        <p className="contact-text">Do you want to create this plan with us?</p>
+        <p className="contact-text2">¡Let us send you an email and let’s get in contact!</p>
+        </div>
+
 
           <div className="button-container">
             <button className="button gray-button">Restart</button>
