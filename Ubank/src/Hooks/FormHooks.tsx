@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { transformData } from "../utils/Transformer";
 import { useNavigate } from "react-router-dom";
 
+
 export const useForm = () => {
     const [questions, setQuestions] = useState<any[]>([]);
     const [questionIndex, setQuestionIndex] = useState<number>(0);
@@ -28,31 +29,38 @@ export const useForm = () => {
     const optionss = questions.length > 0 ? questions[questionIndex].options : [];
 
     const handleNext = () => {
-        if (questionIndex === 11 || questionIndex === 10) {
-            navigate("/plan", { state: { optionvalue } });
-        }
-
-        if (questions[questionIndex]?.id === 9) {
-            // Para la pregunta con selección múltiple
-            const selectedOptions = Array.isArray(selectedAnswer) ? selectedAnswer : [];
-            if (selectedOptions.length === 0) return;
-
-            // Lógica para avanzar, por ejemplo, avanzando según la primera opción seleccionada
-            const nextquestion = optionss[0].next; // O puedes modificar esto si deseas avanzar de otra manera
-            setQuestionIndex(nextquestion);
-            setGeneralIndex(generalIndex + 1);
-            setSelectedAnswer(null); // Reiniciar selección
-        } else {
-            // Lógica para selección única
-            const selectedAnswervalue = selectedAnswer;
-            if (selectedAnswervalue === null || Array.isArray(selectedAnswervalue)) return;
-
-            const nextquestion = optionss[selectedAnswervalue].next;
-            setQuestionIndex(nextquestion);
-            setGeneralIndex(generalIndex + 1);
-            setSelectedAnswer(null);
-        }
-    };
+      if (questionIndex === 11 || questionIndex === 10) {
+          navigate("/plan", { state: { optionvalue } });
+      }
+  
+      if (questions[questionIndex]?.id === 9) {
+          // Para la pregunta con selección múltiple
+          const selectedOptions = Array.isArray(selectedAnswer) ? selectedAnswer : [];
+          if (selectedOptions.length === 0) {
+              alert("Debes seleccionar al menos una respuesta para poder avanzar."); // Alerta en lugar de toast
+              return;
+          }
+  
+          // Lógica para avanzar
+          const nextquestion = optionss[0].next; // O puedes modificar esto si deseas avanzar de otra manera
+          setQuestionIndex(nextquestion);
+          setGeneralIndex(generalIndex + 1);
+          setSelectedAnswer(null); // Reiniciar selección
+      } else {
+          // Lógica para selección única
+          const selectedAnswervalue = selectedAnswer;
+          if (selectedAnswervalue === null || Array.isArray(selectedAnswervalue)) {
+              alert("Debes seleccionar una respuesta para poder avanzar."); // Alerta en lugar de toast
+              return;
+          }
+  
+          const nextquestion = optionss[selectedAnswervalue].next;
+          setQuestionIndex(nextquestion);
+          setGeneralIndex(generalIndex + 1);
+          setSelectedAnswer(null);
+      }
+  };
+  
 
     const handlePrevious = () => {
         setGeneralIndex(0);
