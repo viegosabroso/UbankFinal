@@ -4,15 +4,14 @@ import useAuth from "../../Hooks/UseAuth";
 import { useNavigate, Link } from 'react-router-dom'; 
 import toast from "react-hot-toast";
 
-
 const LogIn: React.FC = () => {
-  const { login } = useAuth(); 
+  const { login, loginWithGoogle } = useAuth(); 
   const [values, setValues] = useState({
     email: "",
     password: ""
   });
   const [loading, setLoading] = useState(false); 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate(); // revisar
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
@@ -25,13 +24,27 @@ const LogIn: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      // Llama a la función login de Firebase
       await login(values.email, values.password);
       navigate("/dashboard");
-    } catch (error:any) {
-        toast.error("Error al iniciar sesión. Verifique sus credenciales."); 
-        setLoading(false); 
-    } 
+    } catch (error: any) {
+      console.log(error); 
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+
+  const handleGoogleLogin = async () => {
+    setLoading(true);
+    try {
+      await loginWithGoogle(); 
+      navigate("/dashboard"); 
+    } catch (error: any) {
+      toast.error("Error al iniciar sesión con Google. Intente nuevamente.");
+    } finally {
+      setLoading(false); 
+    }
   };
 
   return (
@@ -68,12 +81,23 @@ const LogIn: React.FC = () => {
             value={values.password}
             onChange={handleChange}
           />
-          <button type="submit" className="sign-up-button" >
+          <button 
+            type="submit" 
+            className="sign-up-button" 
+            disabled={loading} 
+          >
             Log In
           </button>
-
-          
         </form>
+
+        <button 
+          className="google-login-button" 
+          onClick={handleGoogleLogin} 
+          disabled={loading} 
+        >
+          Log In with Google
+        </button>
+
         <p className="login-link">
           Don't have an account? <Link to="/">Create one</Link>
         </p>

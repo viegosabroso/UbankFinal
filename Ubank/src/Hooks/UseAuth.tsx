@@ -25,10 +25,10 @@ const useAuth = (): UseAuth => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Suscribirse al estado de autenticación
+    
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      if (loading) setLoading(false); // Solo actualiza loading si es necesario
+      if (loading) setLoading(false); 
     });
     return unsubscribe;
   }, [loading]);
@@ -38,14 +38,12 @@ const useAuth = (): UseAuth => {
     try {
       const result = await createUserWithEmailAndPassword(auth, email, password);
 
-      // Guarda el username en Firestore
       await setDoc(doc(db, "users", result.user.uid), {
         username,
         email,
       });
     } catch (error) {
-      console.error("Error al registrar el usuario: ", error);
-      throw new Error("Error al registrar el usuario");
+      handleAuthError(error);
     }
   };
 
@@ -54,8 +52,7 @@ const useAuth = (): UseAuth => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      console.error("Error al iniciar sesión: ", error);
-      throw new Error("Error al iniciar sesión");
+      handleAuthError(error);
     }
   };
 
@@ -65,7 +62,6 @@ const useAuth = (): UseAuth => {
     try {
       const result = await signInWithPopup(auth, provider);
 
-      // Verifica si el usuario ya tiene un documento en Firestore y si no lo crea
       const userDocRef = doc(db, "users", result.user.uid);
       const userSnapshot = await getDoc(userDocRef);
       if (!userSnapshot.exists()) {
@@ -89,6 +85,42 @@ const useAuth = (): UseAuth => {
       throw new Error("Error al cerrar sesión");
     }
   };
+
+  const handleAuthError = (error: any) => {
+  let errorMessage = "Error desconocido. Intente nuevamente.";
+  if (error.code) {
+    switch (error.code) {
+      case 'auth/wrong-password':
+        errorMessage = "Contraseña incorrecta. Por favor, verifique sus credenciales.";
+        break;
+      case 'auth/user-not-found':
+        errorMessage = "Usuario no encontrado. Verifique su email.";
+        break;
+      case 'auth/too-many-requests':
+        errorMessage = "Demasiados intentos fallidos. Por favor, intente más tarde.";
+        break;
+      case 'auth/invalid-credential':
+        errorMessage = "Las credenciales son inválidas. Asegúrese de que su email y contraseña sean correctos.";
+        break;
+      case 'auth/email-already-in-use':
+        errorMessage = "El correo electrónico ya está en uso. Intente con otro.";
+        break;
+      case 'auth/invalid-email':
+        errorMessage = "El correo electrónico no es válido. Por favor, verifique.";
+        break;
+      case 'auth/operation-not-allowed':
+        errorMessage = "El registro con correo electrónico está deshabilitado. Por favor, contacte al soporte.";
+        break;
+      case 'auth/weak-password':
+        errorMessage = "La contraseña es muy débil. Intente con una contraseña más fuerte.";
+        break;
+      default:
+        errorMessage = "Error al iniciar sesión. Intente nuevamente.";
+        break;
+    }
+  }
+  throw new Error(errorMessage); // Lanza un error con el mensaje correspondiente
+};
 
   return {
     currentUser,
