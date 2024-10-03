@@ -1,31 +1,12 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import FinantialPlan from './pages/FinantialPlan/FinantialPlan.tsx';
-import OnBoarding from './pages/OnBoarding/OnBoarding.tsx';
-import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
-import Form from './pages/Form/Form.tsx';
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/form",
-    element: <Form />,
-
-  }
-  ,{
-    path: "/Plan",
-    element: <FinantialPlan />,
-  },
-  
-]);
-
-import App from './App.tsx'
+import { router } from './navigation/HeaderNavigation.tsx';
+import { RouterProvider,} from "react-router-dom";
 import './index.css'
 
+
+
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+
     <RouterProvider router={router}/>
-  </StrictMode>
+  
 )
