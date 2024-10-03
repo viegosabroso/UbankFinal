@@ -8,7 +8,7 @@ import { lazy, Suspense } from 'react';
 import AnswerOption from './Components/Answers/Answers';
 
 const Form: React.FC = () => {
-    const { generalIndex, questionIndex, questions, optionss, handleNext, handlePrevious, handleselectedAnswer } = useForm();
+    const { generalIndex, questionIndex, questions, optionss, handleNext, handlePrevious, handleselectedAnswer, selectedAnswer } = useForm();
     const Answersoption = lazy(() => import('./Components/Answers/Answers'));
     
     return (
@@ -30,6 +30,7 @@ const Form: React.FC = () => {
           
           <AnswerOption
           Onselect={() => handleselectedAnswer(index)}
+          isSelected={selectedAnswer === index}
           key={index}
           text={option.label}
           iconSrc={option.icon}
