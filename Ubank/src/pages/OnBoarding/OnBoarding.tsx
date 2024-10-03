@@ -1,17 +1,27 @@
 import React from 'react';
 import './Components/OnBoarding.css';
 import { useNavigate } from 'react-router-dom';
-
+import img1 from '../../Assets/competitor-analysis--business-competitor-analysis.webp';
+import img2 from '../../Assets/coin.webp';
+import img3 from '../../Assets/obnimg.webp';
+import img4 from '../../Assets/pig.webp';
+import img5 from '../../Assets/question.webp';
+import img6 from '../../Assets/wallet.webp';
 const OnBoarding: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex-container"> {/* Nuevo contenedor para la alineación */}
+  <div className="flex-container"> {/* Nuevo contenedor para la alineación */}
+        <img src={img4} alt="pig" className='pig'/>
+        <img src={img3} alt="calculator" className='calculator' />
+        <img src={img2} alt="coin" className='coin'/>
+        <img src={img5} alt="question-mark" className='question'/>
+        <img src={img5} alt="question-mark" className='question-two'/>
+        <img src={img6} alt="wallet" className='wallet'/>
       <div className="onboarding-container">
-        <div className="top-rectangle"></div> {/* Rectángulo negro superior */}
         
         <div className="content">
-          <div className="image-placeholder"></div> {/* Imagen */}
+          <img src={img1} alt="on-boarding-img"/>
           
           <h1 className="subtitle">Discover your best financial plan</h1>
           
