@@ -55,12 +55,14 @@ const LogIn: React.FC = () => {
 
         <form onSubmit={handleSubmit}>
           <InputForm
+            placeholder="example@gmail.com"
             label="Email Address"
             name="email"
             value={values.email}
             onChange={handleChange}
           />
           <InputForm
+            placeholder="*******"
             label="Password"
             name="password"
             type="password"

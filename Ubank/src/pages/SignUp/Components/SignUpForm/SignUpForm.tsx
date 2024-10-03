@@ -53,18 +53,21 @@ const SignUp: React.FC = () => {
         
         <form onSubmit={handleSubmit}>
           <InputForm
+            placeholder="Enter your name..."
             label="Full Name"
             name="fullName"
             value={values.fullName}
             onChange={handleChange}
           />
           <InputForm
+            placeholder="example@gmail.com"
             label="Email Address"
             name="email"
             value={values.email}
             onChange={handleChange}
           />
           <InputForm
+            placeholder="*******"
             label="Password"
             name="password"
             type="password"
