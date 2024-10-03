@@ -1,9 +1,9 @@
-import React, { useState,  } from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../../../Hooks/UseAuth";
 import InputForm from "../InputForm/InputForm"; 
 import toast from "react-hot-toast";
-import './SignUpForm.css'
+import './SignUpForm.css';
 
 const SignUp: React.FC = () => {
   const [values, setValues] = useState({
@@ -11,10 +11,9 @@ const SignUp: React.FC = () => {
     email: "",
     password: "",
   });
-  const [error, setError] = useState<string>(""); //Ajustar la ventana de errores
-  const { register } = useAuth();
+  const [loading, setLoading] = useState<boolean>(false);
+  const { register, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
@@ -25,12 +24,26 @@ const SignUp: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     try {
-      setError("");
       await register(values.email, values.password, values.fullName);
       navigate("/dashboard");
-    } catch (error:any) {
+    } catch (error: any) {
       toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleSignUp = async () => {
+    setLoading(true);
+    try {
+      await loginWithGoogle();
+      navigate("/dashboard");
+    } catch (error: any) {
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -75,13 +88,23 @@ const SignUp: React.FC = () => {
             value={values.password}
             onChange={handleChange}
           />
-          <button type="submit" className="sign-up-button">
+          <button 
+          type="submit" 
+          className="sign-up-button" 
+          disabled={loading}>
             Sign Up
           </button>
-        </form>
+        
+          <button 
+            className="google-sign-up-button" 
+            onClick={handleGoogleSignUp} 
+            disabled={loading}>
+            Sign Up with Google
+          </button>
         <p className="login-link">
           Do you already have an Account? <Link to="/login">Log In</Link>
         </p>
+        </form>
       </div>
     </div>
   );
