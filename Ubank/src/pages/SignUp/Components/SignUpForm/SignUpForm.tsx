@@ -39,8 +39,8 @@ const SignUp: React.FC = () => {
         <h2>
           Grow your money with <span className="ubank">UBank!</span> 🚀
         </h2>
-        <div className="illustration">
-          <img src="" alt="Illustration" />
+        <div>
+          <img className="illustration" src="./src/assets/Pig.webp" alt="Illustration" />
         </div>
       </div>
       <div className="right-panel">
@@ -53,18 +53,21 @@ const SignUp: React.FC = () => {
         
         <form onSubmit={handleSubmit}>
           <InputForm
+            placeholder="Enter your name..."
             label="Full Name"
             name="fullName"
             value={values.fullName}
             onChange={handleChange}
           />
           <InputForm
+            placeholder="example@gmail.com"
             label="Email Address"
             name="email"
             value={values.email}
             onChange={handleChange}
           />
           <InputForm
+            placeholder="*******"
             label="Password"
             name="password"
             type="password"

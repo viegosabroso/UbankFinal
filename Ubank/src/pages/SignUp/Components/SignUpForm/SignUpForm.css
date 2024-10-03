@@ -5,7 +5,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
@@ -25,18 +25,17 @@
   /* Layout */
   .sign-up-container {
     display: flex;
-    max-width: 1000px;
-    width: 100%;
+    width: 990px;
+    height: 600px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 38px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
   
-  /* Left panel (illustration) */
   .left-panel {
     flex: 1;
-    background-color: #DAF569;
+    background-color: #D7F177;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -44,21 +43,32 @@
     align-items: center;
   }
   
+  @font-face {
+    font-family: 'Lufga';
+    src: url(./Fonts/LufgaBold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
   .left-panel h2 {
-    color: #000;
-    font-size: 24px;
+    color: #1F1E30;
+    font-family: 'Lufga';
+    font-size: 30px;
+    width: 280px;
+    text-align: center;
     margin-bottom: 1rem;
+    line-height: 29px;
   }
   
   .left-panel .ubank {
     color: #8644DB;
     font-weight: bold;
+    font-family: 'Lufga';
   }
   
-  .left-panel .illustration {
-    width: 150px;
-    height: 150px;
-    background: url('/path-to-your-image.png') center/contain no-repeat;
+  .illustration {
+    padding-top: 10px;
+    width: 280px;
   }
   
   /* Right panel (form) */
@@ -73,6 +83,8 @@
   .right-panel h2 {
     color: #333;
     font-size: 28px;
+    font-family: 'Lufga';
+    font-weight: bold;
   }
   
   .right-panel .highlight {
@@ -106,9 +118,16 @@
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 45px;
     font-size: 16px;
     color: #333;
+  }
+
+  .input-field ::placeholder{
+    font-size: 14px;
+    font-family: 'Poppins';
+    padding-left: 8px;
+    color: #6b35f564;
   }
   
   .input-field input:focus {
@@ -123,19 +142,15 @@
     color: white;
     padding: 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 40px;
     font-size: 16px;
+    font-family: 'Poppins';
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sign-up-button:hover {
-    background-color: #8644DB;
   }
   
   /* Login link */
   .login-link {
-    margin-top: 1rem;
+    padding-top: 25px;
     text-align: center;
     font-size: 14px;
     color: #555;
