@@ -6,7 +6,7 @@ import OnBoarding from "../pages/OnBoarding/OnBoarding";
 const FormPage = lazy(() => import("../pages/Form/Form"));
 import Error from "../components/Error/Error";
 
-export const router = createBrowserRouter([
+export const routerform = ([
     {
       path: "/",
       element: <App />,

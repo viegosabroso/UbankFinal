@@ -50,7 +50,7 @@ const Form: React.FC = () => {
       <Question 
         currentNumber={"Question " + (generalIndex + 0)}
         text={questions.length > 0 ? questions[questionIndex].text : ""}
-        instruction={questions[questionIndex].id === 9 ? "Select Multiple Options": "Select one option"}
+        instruction={"Select an answer"}
         imageSrc="" 
         questionIndicator="/path/to/indicator.png"
       />
