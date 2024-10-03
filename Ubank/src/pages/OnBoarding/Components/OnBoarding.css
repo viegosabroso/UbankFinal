@@ -13,7 +13,6 @@ body {
     left: 228.32px;
     gap: 0px;
     opacity: 0px;
-    angle: -14.19 deg;
 
 }
 
@@ -25,7 +24,6 @@ body {
     left: 1227.57px;
     gap: 0px;
     opacity: 0px;
-    angle: -49.28 deg;
 
 }
 
@@ -37,7 +35,6 @@ body {
     left: 1166.18px;
     gap: 0px;
     opacity: 0px;
-    angle: -24.18 deg;
 
 }
 
@@ -49,7 +46,6 @@ body {
     left: 424.82px;
     gap: 0px;
     opacity: 0px;
-    angle: -10.68 deg;
 
 }
 
@@ -193,7 +189,7 @@ body {
         left: 28.32px;
         gap: 0px;
         opacity: 0px;
-        angle: -14.19 deg;
+        
     
     }
     
@@ -205,7 +201,7 @@ body {
         left: 337.57px;
         gap: 0px;
         opacity: 0px;
-        angle: -49.28 deg;
+        
     
     }
     
@@ -217,7 +213,7 @@ body {
         left: 283.57px;
         gap: 0px;
         opacity: 0px;
-        angle: -24.18 deg;
+        
 
     
     }
@@ -230,7 +226,7 @@ body {
         left: 123.37px;
         gap: 0px;
         opacity: 0px;
-        angle: -10.68 deg;
+    
     }
     
     .question{

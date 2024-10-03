@@ -3,23 +3,24 @@ import './Card.css';
 
 interface CardProps {
   number: number;
-  image?: string;  // Prop opcional para reemplazar el círculo con una imagen
+  imageSrc?: string;  // Prop opcional para la imagen de la tarjeta
   text: string;
 }
 
-const Card: React.FC<CardProps> = ({ number, image, text }) => {
+const Card: React.FC<CardProps> = ({ number, imageSrc, text }) => {
   return (
     <div className="card">
       <div className="card-number">{number}</div>
-      {/* Si hay una imagen, mostrarla; de lo contrario, mostrar el círculo */}
-      {image ? (
-        <img src={image} alt="Card visual" className="card-image" />
-      ) : (
-        <div className="card-circle"></div>
+
+      {/* Mostrar la imagen si está disponible */}
+      {imageSrc && (
+        <img src={imageSrc} alt={`Image for card ${number}`} className="card-image" />
       )}
+
       <p className="card-text">{text}</p>
     </div>
   );
 };
 
 export default Card;
+
