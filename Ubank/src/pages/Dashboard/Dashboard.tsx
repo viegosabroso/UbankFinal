@@ -8,15 +8,15 @@ import './Dashboard.css'
 
 const Dashboard: React.FC = () => {
   const [username, setUsername] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(true); // Estado de carga
+  const [loading, setLoading] = useState<boolean>(true); 
   const navigate = useNavigate();
-  const auth = getAuth(); // Mover getAuth() fuera del useEffect
+  const auth = getAuth(); 
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         try {
-          // El usuario está logueado, obtenemos los datos
+         
           const userDoc = await getDoc(doc(db, "users", user.uid));
           if (userDoc.exists()) {
             setUsername(userDoc.data()?.username || "");
@@ -25,23 +25,23 @@ const Dashboard: React.FC = () => {
           console.error("Error fetching user data: ", error);
           toast.error("Error fetching user data.");
         } finally {
-          setLoading(false); // Cambiar el estado de carga
+          setLoading(false); 
         }
       } else {
-        // El usuario no está logueado, redirigimos y mostramos un toast
+        
         toast.success("Finalizó su sesión exitosamente");
-        navigate("/"); // Redirigir a la página de login
+        navigate("/"); 
       }
     });
 
-    return () => unsubscribe(); // Limpiar suscripción
-  }, [auth, navigate]); // Auth se convierte en una dependencia
+    return () => unsubscribe(); 
+  }, [auth, navigate]); 
 
-  // Función de logout
+ 
   const handleLogout = async () => {
     try {
-      await signOut(auth); // Desloguear de Firebase
-      navigate("/"); // Redirigir al Sign Up o página principal
+      await signOut(auth); 
+      navigate("/"); 
     } catch (error) {
       console.error("Error logging out: ", error);
       toast.error("Error logging out.");

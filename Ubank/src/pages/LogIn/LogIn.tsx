@@ -96,7 +96,7 @@ const LogIn: React.FC = () => {
  
           <button 
             type="submit" 
-            className="google-button" 
+            className="sign-up-button" 
             onClick={handleGoogleLogin} 
             disabled={loading}>
             Log In with Google

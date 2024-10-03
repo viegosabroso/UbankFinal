@@ -102,7 +102,7 @@ const SignUp: React.FC = () => {
 
           <button 
             type="submit" 
-            className="google-button" 
+            className="sign-up-button" 
             onClick={handleGoogleSignUp} 
             disabled={loading}>
             Sign Up with Google
