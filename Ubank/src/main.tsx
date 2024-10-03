@@ -1,34 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
-import './index.css'
-import './Clients/firebase.ts' // Importa la configuración de Firebase para inicializarla
-import SignUp from './pages/SignUp/Components/SignUpForm/SignUpForm.tsx';
-import LogIn from './pages/LogIn/LogIn.tsx';
-import Dashboard from './pages/Dashboard/Dashboard.tsx';
 import { Toaster } from 'react-hot-toast';
-
-
-
-
-const router = createBrowserRouter([
-
-      {
-        path: "/", 
-        element: <SignUp />,
-      },
-      {
-        path: "login", 
-        element: <LogIn />,
-      },
-      {
-        path: "dashboard", 
-        element: <Dashboard />,
-      },
-
-
-
-]);
+import { RouterProvider } from 'react-router-dom';
+import router from './navigation/HeaderNavigation.tsx';
+import './Clients/firebase.ts'
+import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

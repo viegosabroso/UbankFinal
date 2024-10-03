@@ -25,10 +25,10 @@ const useAuth = (): UseAuth => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Suscribirse al estado de autenticación
+    
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      if (loading) setLoading(false); // Solo actualiza loading si es necesario
+      if (loading) setLoading(false); 
     });
     return unsubscribe;
   }, [loading]);
@@ -38,14 +38,13 @@ const useAuth = (): UseAuth => {
     try {
       const result = await createUserWithEmailAndPassword(auth, email, password);
 
-      // Guarda el username en Firestore
       await setDoc(doc(db, "users", result.user.uid), {
         username,
         email,
       });
     } catch (error) {
-      console.error("Error al registrar el usuario: ", error);
-      throw new Error("Error al registrar el usuario");
+      console.error("Error al iniciar sesión: ", error);
+      throw new Error("Error al iniciar sesión");
     }
   };
 
@@ -65,7 +64,6 @@ const useAuth = (): UseAuth => {
     try {
       const result = await signInWithPopup(auth, provider);
 
-      // Verifica si el usuario ya tiene un documento en Firestore y si no lo crea
       const userDocRef = doc(db, "users", result.user.uid);
       const userSnapshot = await getDoc(userDocRef);
       if (!userSnapshot.exists()) {
@@ -89,6 +87,7 @@ const useAuth = (): UseAuth => {
       throw new Error("Error al cerrar sesión");
     }
   };
+
 
   return {
     currentUser,

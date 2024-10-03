@@ -2,6 +2,7 @@ import React, { useState,  } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../../../Hooks/UseAuth";
 import InputForm from "../InputForm/InputForm"; 
+import toast from "react-hot-toast";
 import './SignUpForm.css'
 
 const SignUp: React.FC = () => {
@@ -28,8 +29,8 @@ const SignUp: React.FC = () => {
       setError("");
       await register(values.email, values.password, values.fullName);
       navigate("/dashboard");
-    } catch (error) {
-      setError("Error al registrar el usuario");
+    } catch (error:any) {
+      toast.error(error.message);
     }
   };
 
