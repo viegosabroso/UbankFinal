@@ -22,6 +22,27 @@
     color: #292929;
 }
 
+.checkbox-answer {
+    display: flex; /* Utiliza flexbox para alinear el checkbox y el texto */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilos para el label del checkbox */
+.checkbox-answer label {
+    cursor: pointer; /* Cambia el cursor al pasar por encima del label */
+}
+
+/* Estilos para el input tipo checkbox */
+.checkbox-answer input[type="checkbox"] {
+    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+}
+
+/* Agrega un color de fondo o un cambio de color al seleccionar */
+.checkbox-answer input[type="checkbox"]:checked + span {
+    color: green; /* Cambia el color del texto cuando está seleccionado */
+    font-weight: bold; /* Opcional: resalta el texto */
+}
+
 @media (max-width: 480px) {
     .answers {
         flex-direction: column; /* Apila las tarjetas verticalmente en móviles */

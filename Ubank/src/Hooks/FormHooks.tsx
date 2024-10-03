@@ -6,7 +6,7 @@ export const useForm = () => {
     const [questions, setQuestions] = useState<any[]>([]);
     const [questionIndex, setQuestionIndex] = useState<number>(0);
     const [optionvalue, setOptionvalue] = useState<any[]>([]);
-    const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null); // Permitir null para no tener respuesta seleccionada al inicio
+    const [selectedAnswer, setSelectedAnswer] = useState<number | number[] | null>(null); // Permitir múltiples selecciones para checkbox
     const [generalIndex, setGeneralIndex] = useState<number>(1);
 
     const navigate = useNavigate();
@@ -25,7 +25,6 @@ export const useForm = () => {
         fetchData();
     }, []);
 
-    // Acceder a las opciones de la pregunta actual
     const optionss = questions.length > 0 ? questions[questionIndex].options : [];
 
     const handleNext = () => {
@@ -33,25 +32,55 @@ export const useForm = () => {
             navigate("/plan", { state: { optionvalue } });
         }
 
-        const selectedAnswervalue = selectedAnswer;
-        if (selectedAnswervalue === null) return; // No continuar si no se ha seleccionado una respuesta
+        if (questions[questionIndex]?.id === 9) {
+            // Para la pregunta con selección múltiple
+            const selectedOptions = Array.isArray(selectedAnswer) ? selectedAnswer : [];
+            if (selectedOptions.length === 0) return;
 
-        const nextquestion = optionss[selectedAnswervalue].next;
-        setQuestionIndex(nextquestion);
-        setGeneralIndex(generalIndex + 1);
-        setSelectedAnswer(null); // Reiniciar la selección
+            // Lógica para avanzar, por ejemplo, avanzando según la primera opción seleccionada
+            const nextquestion = optionss[0].next;
+            setQuestionIndex(nextquestion);
+            setGeneralIndex(generalIndex + 1);
+            setSelectedAnswer(null); // Reiniciar selección
+        } else {
+            // Lógica para selección única
+            const selectedAnswervalue = selectedAnswer;
+            if (selectedAnswervalue === null || Array.isArray(selectedAnswervalue)) return;
+
+            const nextquestion = optionss[selectedAnswervalue].next;
+            setQuestionIndex(nextquestion);
+            setGeneralIndex(generalIndex + 1);
+            setSelectedAnswer(null);
+        }
     };
 
     const handlePrevious = () => {
         setGeneralIndex(0);
         setQuestionIndex(0);
-        setSelectedAnswer(null); // Reiniciar la selección
+        setSelectedAnswer(null);
         setOptionvalue([]);
     };
 
     const handleselectedAnswer = (index: number) => {
-        setSelectedAnswer(index); // Actualizar la respuesta seleccionada
-        setOptionvalue([...optionvalue, optionss[index].value]); // Agregar el valor seleccionado al array
+        if (questions[questionIndex]?.id === 9) {
+            // Lógica para selección múltiple (checkboxes)
+            if (Array.isArray(selectedAnswer)) {
+                if (selectedAnswer.includes(index)) {
+                    // Deselecciona si ya estaba seleccionado
+                    setSelectedAnswer(selectedAnswer.filter((i) => i !== index));
+                } else {
+                    // Añadir opción seleccionada
+                    setSelectedAnswer([...selectedAnswer, index]);
+                }
+            } else {
+                setSelectedAnswer([index]); // Inicializa como array si es la primera selección
+            }
+        } else {
+            // Lógica para selección única
+            setSelectedAnswer(index);
+        }
+
+        setOptionvalue([...optionvalue, optionss[index].value]);
     };
 
     return {
@@ -66,3 +95,4 @@ export const useForm = () => {
         generalIndex,
     };
 };
+
