@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import emailjs from 'emailjs-com'
+
+
 import { auth, db } from "../Clients/firebase";
 import {
   onAuthStateChanged,
@@ -21,8 +24,14 @@ interface UseAuth {
 }
 
 const useAuth = (): UseAuth => {
+
+  
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+
+
+  const serviceID = "service_dn7ax1n"
+  const templateID = "contact_form"
 
   useEffect(() => {
     
@@ -42,8 +51,20 @@ const useAuth = (): UseAuth => {
         username,
         email,
       });
+
+      
     } catch (error) {
       handleAuthError(error);
+    }
+    
+    try {
+      emailjs.init("d0AT7BktnKXvVjoKX")
+      emailjs.send(serviceID, templateID, {
+        username: username,
+        email: email,
+      } )
+    } catch (error) {
+      handleAuthError(error)
     }
   };
 
