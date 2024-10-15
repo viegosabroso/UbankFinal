@@ -31,6 +31,7 @@ const FinantialPlan = () => {
   const navigate = useNavigate();
 
   return (
+    
     <div className="financial-plan-container">
       <div className="top-rectangle"></div> {/* Rectángulo negro superior */}
 
@@ -38,7 +39,7 @@ const FinantialPlan = () => {
         <h1 className="subtitle">Your best financial plan is:</h1>
         <h2 className="<efficient-subtitle">{title}</h2> {/* Display the most frequent plan */}
         
-        <div className="card-container">
+        <div className="card-container-financialPlan">
           {/* Mapea las descripciones y asocia cada una con su imagen */}
           {filteredPlans.map((description: string, index: number) => (
             <Card

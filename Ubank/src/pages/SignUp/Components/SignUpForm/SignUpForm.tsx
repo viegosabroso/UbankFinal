@@ -49,6 +49,7 @@ const SignUp: React.FC = () => {
 
   return (
     <>
+    <div className="Signup-page">
     <div className="container-responsive-logo">
     <img className="responsive-logo" src="./src/assets/UB-logo.webp" alt="" />
     </div>
@@ -116,6 +117,7 @@ const SignUp: React.FC = () => {
         </form>
       </div>
     </div>
+              </div>
     </>
   );
 };

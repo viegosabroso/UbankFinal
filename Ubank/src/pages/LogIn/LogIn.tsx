@@ -50,6 +50,7 @@ const LogIn: React.FC = () => {
 
   return (
     <>
+    <div className="Login-page">
         <div className="sign-up-container">
       <div className="left-panel">
         <h2>
@@ -107,6 +108,7 @@ const LogIn: React.FC = () => {
 
         </form>
       </div>
+    </div>
     </div>
     </>
   );

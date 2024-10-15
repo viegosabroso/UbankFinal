@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #F7F7F5; 
-}
 
 /* Contenedor principal */
 .financial-plan-container {
@@ -47,26 +43,25 @@ body {
 .subtitle {
     color: #1F1E30;
     text-align: center; 
-    font-size: 32px; /* Tamaño de letra deseado */
+    font-size: 32px; 
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: 8px; /* Ajusta el espaciado */
+    margin-bottom: 8px; 
 }
 
-/* Subtítulo "Efficient" */
+
 .efficient-subtitle {
     color: #8644DB;
     text-align: center; 
-    font-size: 32px; /* Ajusta el tamaño si es necesario */
+    font-size: 32px; 
     font-weight: 500;
-    margin-bottom: 16px; /* Espaciado entre subtítulos */
+    margin-bottom: 16px;
 }
 
-/* Contenedor de tarjetas */
-.card-container {
+.card-container-financialPlan{
     display: flex;
-    flex-direction: column;
-    gap: 16px; /* Espaciado entre tarjetas */
+    flex-direction: row;
+    gap: 16px; 
     margin-top: 50px;
 }
 

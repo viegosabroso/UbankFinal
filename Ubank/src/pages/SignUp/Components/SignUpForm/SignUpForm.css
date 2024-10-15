@@ -7,12 +7,14 @@
   body {
     font-family: 'Poppins', sans-serif;
     background-color: #F0F0F0;
+    
+  }
+  .Signup-page{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
-  
   a {
     color: #6A35F5;
     text-decoration: none;
@@ -30,6 +32,14 @@
     border-radius: 38px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    
+  }
+  
+  .Login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
   .left-panel {
