@@ -21,6 +21,8 @@ const Dashboard: React.FC = () => {
           const userDoc = await getDoc(doc(db, "users", user.uid));
           if (userDoc.exists()) {
             setUsername(userDoc.data()?.username || "");
+            console.log("User data: ", userDoc.data()?.Userdata);
+            
           }
         } catch (error) {
           console.error("Error al obtener los datos del usuario: ", error);

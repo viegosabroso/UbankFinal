@@ -50,6 +50,12 @@ const useAuth = (): UseAuth => {
       await setDoc(doc(db, "users", result.user.uid), {
         username,
         email,
+        Userdata: {
+          Incomes: 0,
+          Expenses: 0,
+          Savings: 0,
+        }
+        
       });
 
       
@@ -89,6 +95,11 @@ const useAuth = (): UseAuth => {
         await setDoc(userDocRef, {
           username: result.user.displayName,
           email: result.user.email,
+          Userdata: {
+            Incomes: 0,
+            Expenses: 0,
+            Savings: 0,
+          }
         });
       }
     } catch (error) {
