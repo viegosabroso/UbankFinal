@@ -12,7 +12,7 @@ const Incomescard = ({IncomeTitle, IncomeAmount, IncomeDate, Incomesimg}:Incomes
     <div>
         <img src={Incomesimg} alt="" />
         <h2>{IncomeTitle}</h2>
-        <h3>{IncomeAmount}</h3>
+        <h3>{IncomeAmount} $</h3>
         <div>
             <h3>{IncomeDate}</h3>
         </div>
