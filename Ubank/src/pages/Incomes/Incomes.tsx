@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { IncomesContext } from "../Context/Incomes";
 import { getUserData, updateUserData } from "../../Services/Userdata";
-
 import Incomescard from "./Components/Incomescard/Incomescard";
+import MinorExpense from "./Components/MinorExpense/MinorExpense";
+
 
 
 interface IncomesProps {
@@ -92,6 +93,8 @@ const [incomeDate, setIncomeDate] = useState<string>("");
 
             )}
             
+            <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
+
            </div>
     )
 };
