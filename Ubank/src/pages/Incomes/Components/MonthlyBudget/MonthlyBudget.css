@@ -1,0 +1,53 @@
+.monthly-budget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.monthly-budget h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.circular-chart {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#4caf50 0%, #ddd 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monthly-budget h3 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.expenses-summary {
+    font-size: 1rem;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.expenses-summary p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
