@@ -1,16 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db, auth } from "../../Clients/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import './Dashboard.css'
-import { IncomesContext } from "../Context/Incomes";
+import { UseContextIncomes } from "../../Hooks/Usecontext";
 
 const Dashboard: React.FC = () => {
 
-  const context  = useContext(IncomesContext);
-  console.log(context);
   
 
   const [username, setUsername] = useState<string>("");
@@ -27,7 +25,6 @@ const Dashboard: React.FC = () => {
           const userDoc = await getDoc(doc(db, "users", user.uid));
           if (userDoc.exists()) {
             setUsername(userDoc.data()?.username || "");
-            console.log("User data: ", userDoc.data()?.Userdata);
             
           }
         } catch (error) {

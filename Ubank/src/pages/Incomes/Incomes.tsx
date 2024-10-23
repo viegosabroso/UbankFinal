@@ -1,9 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { IncomesContext } from "../Context/Incomes";
+import { useEffect, useState } from "react";
+import { UseContextIncomes } from "../../Hooks/Usecontext";
 import { getUserData, updateUserData } from "../../Services/Userdata";
 
 import Incomescard from "./Components/Incomescard/Incomescard";
 
+const { incomesdata } = UseContextIncomes();
 
 interface IncomesProps {
     IncomeName: string;
@@ -13,9 +14,14 @@ interface IncomesProps {
 }
 
 interface IncomesData {
-    Incomes: IncomesProps[]
+    Userdata: {
+        Incomes: IncomesProps[]
+    }
 }
 const Incomes = () => {
+    
+    
+
 
 const [incomes, setIncomes] = useState<IncomesProps[]>([]);
 const [incomeName, setIncomeName] = useState<string>("");
@@ -27,18 +33,21 @@ const [incomeDate, setIncomeDate] = useState<string>("");
  
     
  useEffect(() => {
+    
     const fetchData = async () => {
         try{
         const userData = await getUserData() as IncomesData;
             console.log(userData);
             
              
-             setIncomes(userData.Incomes);
+             setIncomes(userData.Userdata?.Incomes || []);
          
     }catch(error){
         console.error("Error fetching Incomes data:", error);
     }
 }
+
+
     fetchData();
 }, []);
 
@@ -64,16 +73,12 @@ const [incomeDate, setIncomeDate] = useState<string>("");
     
     
  }
- const incomecontextt = useContext(IncomesContext);
- console.log(incomecontextt);
  
  useEffect(() => {
      console.log(incomes);
     }, [incomes]);
 
-    const sumincomes = incomes.reduce((acc, curr) => acc + curr.IncomeAmount, 0);
-    console.log(sumincomes);
-    
+  
 
     return (
         <div>
@@ -84,13 +89,11 @@ const [incomeDate, setIncomeDate] = useState<string>("");
                 <input type="date" onChange={(e) => setIncomeDate(e.target.value)} />
                 <button onClick={handleupload}>Submit</button>
             </div>
-            {incomes.length > 0 ? (
+            { 
                 incomes.map((income, index) => (
                     <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="" />
-                )) ) : (
-                <p>No incomes available</p>
-
-            )}
+                ))
+            }
             
            </div>
     )

@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast';
 
 import './Clients/firebase.ts'
 import './index.css'
-import { IncomesProvider } from './pages/Context/Incomes.tsx';
+import { IncomesProvider } from './Context/Incomes.tsx';
 
 createRoot(document.getElementById('root')!).render(
     <>
