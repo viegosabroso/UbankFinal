@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { UseContextIncomes } from "../../Hooks/Usecontext";
 import { getUserData, updateUserData } from "../../Services/Userdata";
-
 import Incomescard from "./Components/Incomescard/Incomescard";
+import MinorExpense from "./Components/MinorExpense/MinorExpense";
+
 
 const { incomesdata } = UseContextIncomes();
 
@@ -95,6 +96,8 @@ const [incomeDate, setIncomeDate] = useState<string>("");
                 ))
             }
             
+            <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
+
            </div>
     )
 };
