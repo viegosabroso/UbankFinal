@@ -14,7 +14,9 @@ export const IncomesProvider = ({ children }: { children: any }) => {
         const userData = async () => {
             try {
                 const data = await getUserData() as any;
-                setIncomes(data.Userdata.Incomes);
+                setIncomes(data.Incomes);
+                console.log(data.Incomes);
+                
             } catch (error) {
                 console.log(error);
             }

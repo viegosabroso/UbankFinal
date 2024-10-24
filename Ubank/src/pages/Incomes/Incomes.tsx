@@ -5,7 +5,7 @@ import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
 
 
-const { incomesdata } = UseContextIncomes();
+
 
 interface IncomesProps {
     IncomeName: string;
@@ -21,7 +21,7 @@ interface IncomesData {
 }
 const Incomes = () => {
     
-    
+    const {incomesdata} = UseContextIncomes();
 
 
 const [incomes, setIncomes] = useState<IncomesProps[]>([]);
@@ -34,23 +34,14 @@ const [incomeDate, setIncomeDate] = useState<string>("");
  
     
  useEffect(() => {
+    console.log(incomesdata);
     
-    const fetchData = async () => {
-        try{
-        const userData = await getUserData() as IncomesData;
-            console.log(userData);
-            
-             
-             setIncomes(userData.Userdata?.Incomes || []);
-         
-    }catch(error){
-        console.error("Error fetching Incomes data:", error);
-    }
-}
+    
+   setIncomes(incomesdata)
 
 
-    fetchData();
-}, []);
+    
+}, [incomesdata]);
 
 
    

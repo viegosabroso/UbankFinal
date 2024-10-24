@@ -9,7 +9,7 @@ import { UseContextIncomes } from "../../Hooks/Usecontext";
 
 const Dashboard: React.FC = () => {
 
-  
+  const {incomesdata} = UseContextIncomes();
 
   const [username, setUsername] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
@@ -17,6 +17,8 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(incomesdata);
+    
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setLoading(true); 
       if (user) {
@@ -44,7 +46,7 @@ const Dashboard: React.FC = () => {
     });
 
     return () => unsubscribe(); 
-  }, [navigate, isLoggingOut]);
+  }, [navigate, isLoggingOut,incomesdata]);
 
   
   const handleLogout = async () => {
