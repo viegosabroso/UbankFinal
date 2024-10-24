@@ -92,8 +92,10 @@ const [incomeDate, setIncomeDate] = useState<string>("");
                 <p>No incomes available</p>
 
             )}
-            
+            <div className="nose">
+
             <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
+            </div>
 
            </div>
     )
