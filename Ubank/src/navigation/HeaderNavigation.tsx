@@ -4,13 +4,16 @@ import { routerform } from "./Navigation";
 import Authrouters from "./AuthNavegation";
 import Incomes from "../pages/Incomes/Incomes";
 
+
 const router = createBrowserRouter([
 
     {
       path: "Incomes",
       element:
-      
+ 
+
         <Incomes />
+ 
       ,
         
       
@@ -20,7 +23,11 @@ const router = createBrowserRouter([
     {
       path: "dashboard", 
       element: 
+      
+    
         <Dashboard />
+     
+      
           ,
     },
     ...routerform,

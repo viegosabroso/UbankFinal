@@ -1,5 +1,3 @@
-
-import App from "../App";
 import FinantialPlan from "../pages/FinantialPlan/FinantialPlan";
 import { lazy, Suspense } from "react";
 import OnBoarding from "../pages/OnBoarding/OnBoarding";

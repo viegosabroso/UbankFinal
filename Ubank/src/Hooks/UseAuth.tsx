@@ -52,10 +52,6 @@ const useAuth = (): UseAuth => {
         email,
         Userdata: {
           Incomes: [{
-            IncomeName: "",
-            
-            IncomeAmount: 0,
-            IncomeDate: "",
           }],
           Expenses: [{
             ExpenseName: "",
