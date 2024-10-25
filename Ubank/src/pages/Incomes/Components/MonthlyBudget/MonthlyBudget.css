@@ -15,7 +15,10 @@
     color: #333;
     margin-bottom: 20px;
 }
-
+.nose{
+    background-color: beige;
+    padding: 30px;
+}
 .circular-chart {
     width: 150px;
     height: 150px;
