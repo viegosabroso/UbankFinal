@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import './Dashboard.css'
 import { UseContextIncomes } from "../../Hooks/Usecontext";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 const Dashboard: React.FC = () => {
 
@@ -73,9 +74,8 @@ const Dashboard: React.FC = () => {
       className="welcome-user">
         Welcome, {username} 🌷͙֒🎀
       </h2>
-      <button 
-      className="log-out-button"
-      onClick={handleLogout}>Logout</button>
+      
+      <Sidebar onLogout={handleLogout} />
     </div>
   );
 };
