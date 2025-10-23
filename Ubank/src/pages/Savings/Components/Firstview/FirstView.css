@@ -1,0 +1,66 @@
+.firstview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 250px;
+  }
+  
+  .title-firstview {
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    font-weight: semibold;
+    line-height: 1.08;
+    color: #1F1E30;
+    margin-bottom: 8px;
+    width: 241px;
+  }
+  
+  .highlight {
+    color: #8644DB;
+  }
+  
+  .subtitle-firstview {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #6F6F6F;
+    margin-bottom: 20px;
+    max-width: 400px; 
+  }
+  
+  .img-savings-firstview {
+    width: 210px;
+    margin-bottom: 20px;
+  }
+  
+
+  .create-goal-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #8644DB;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .create-goal-button:hover {
+    background-color: #702BBE;
+  }
+  
+  .footer-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #6F6F6F;
+    margin-top: 20px;
+    font-weight: 200
+  }

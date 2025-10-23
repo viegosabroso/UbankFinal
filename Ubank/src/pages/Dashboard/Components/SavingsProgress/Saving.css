@@ -1,0 +1,74 @@
+.progress-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 25px;
+    width: 410px;
+    height: fit-content;
+
+  }
+  
+  .progress-card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress-card .icon-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .progress-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+  
+  .progress-card .percentage {
+    color: #8644DB;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  
+  .progress-card .description {
+    color: #000000;
+    margin-left: 5px;
+    margin-top: 10px; 
+    font-size: 15px;
+    
+  }
+  
+  .progress-card .amounts {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  .amounts .goal {
+    color: #aaa;
+  }
+  
+  .progress-card .progress-bar {
+    width: 100%;
+    height: 13px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  
+  .progress-card  .progress {
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+
+  
+  

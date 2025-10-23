@@ -1,0 +1,7 @@
+.ExpensesText-wheel{
+    display: flex;
+    flex-direction: column;
+}
+.Icon1{
+    margin-right: 10px;
+}

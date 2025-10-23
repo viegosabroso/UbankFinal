@@ -1,0 +1,31 @@
+.transaction-item{
+    display: flex;
+    gap: 390px;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.transaction-item p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+}
+
+.transaction-item .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 42px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #EFF8C0;
+}
+
+.content-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 160px;
+}

@@ -1,0 +1,135 @@
+.sidebar {
+  position: fixed;
+  border-radius: 22px;
+  background: linear-gradient(184deg, #4E0F5E -83.32%, #010C1E 96.97%);
+  width: 257px;
+  height: 700px;
+  flex-shrink: 0;
+  padding: 20px;
+  color: #fff; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.sidebar-logo img {
+  width: 95px;
+  height: 24px;
+  object-fit: contain; 
+  margin: 15px; 
+  margin-bottom: 45px;
+}
+
+/* Menu items */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  width: 220px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px; /* Espacio entre los elementos */
+}
+
+/* MenuItem styling */
+.menu-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+  background-color: #D7F177;
+  color: #4E0F5E;
+}
+
+.menu-item .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Sign Out button */
+.sign-out {
+  margin-top: auto; /* Empuja el botón de Sign Out hacia abajo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-out-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 220px;
+  height: 49px;
+  padding: 0 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sign-out-button:hover {
+  background-color: #D7F177;
+  color: #4E0F5E;
+}
+
+.sign-out-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.sign-out-button:hover .sign-out-icon {
+  transform: scale(1.1);
+}
+
+.premium{
+  margin-top: 100px;
+  background-color: #fff;
+  border-radius: 25px;
+  height: 150px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.text-premium{
+  color: #323232;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.text-premium2{
+  color: #010C1E;
+  font-size: 25px;
+}
+
+.text-premium2 span{
+  color: #8644DB;
+}
+
+.button-premium{
+  background-color: #D7F177;
+  border-radius: 100px;
+  border-color: transparent;
+  font-family: Poppins;
+  width: 150px;
+  height: 30px;
+  margin-top: 12px;
+  font-weight: 600;
+}

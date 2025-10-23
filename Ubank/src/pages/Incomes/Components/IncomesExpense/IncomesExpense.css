@@ -1,0 +1,17 @@
+.header-incomesexpenses .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.rectangle-expenses{
+    display: flex;
+    background-color: #eFd5D2;
+    height: 30px;
+    width: 5px;
+    border-radius: 10px;
+}

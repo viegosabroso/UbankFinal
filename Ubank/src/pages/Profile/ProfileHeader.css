@@ -1,0 +1,52 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #8644DB;
+}
+
+.connectButton {
+  background-color: #8644DB;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.connectButton:hover {
+  background-color: #6f36b3;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  color: #8644DB;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+@media (max-width: 430px) {
+  .profileImage {
+      width: 60px;
+      height: 60px;
+  }
+
+  .connectButton {
+      font-size: 12px;
+      padding: 8px 12px;
+  }
+}

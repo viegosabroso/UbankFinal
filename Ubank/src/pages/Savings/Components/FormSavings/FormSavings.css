@@ -1,0 +1,93 @@
+.form-savings-specific-container {
+    margin: 0 auto;
+    padding: 20px;
+   
+  }
+  
+  .section-title-specific {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .highlight-specific {
+    color: #8b5cf6;
+  }
+  
+  .goal-details-specific,
+  .savings-plan-specific {
+    margin-bottom: 30px;
+  }
+  
+  .input-group-specific {
+    margin-bottom: 20px;
+  }
+  
+  .input-label-specific {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .input-field-specific,
+  .select-field-specific {
+    width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field-specific:focus,
+  .select-field-specific:focus {
+    border-color: #8b5cf6; 
+  }
+  
+  .form-savings-buttons-specific {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .cancel-button-specific {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    
+  }
+  
+  .cancel-button-specific:hover {
+    background-color: #dcdcdc;
+    color: #333;
+  }
+  
+  .create-button-specific{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #8644DB;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .create-button-specific:hover {
+    background-color: #702BBE;
+  }

@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+
+import { RouterProvider,} from "react-router-dom";
+import './index.css';
+
+import router from './navigation/HeaderNavigation.tsx';
+import { Toaster } from 'react-hot-toast';
+
+import './Clients/firebase.ts'
 import './index.css'
+import { IncomesProvider } from './Context/Incomes.tsx';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <>
+<IncomesProvider>
+
+    <RouterProvider router={router} /><Toaster />
+</IncomesProvider>
+    </> 
 )

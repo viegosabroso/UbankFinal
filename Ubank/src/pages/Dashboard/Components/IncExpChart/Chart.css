@@ -1,0 +1,64 @@
+.chart-container{
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    border-radius: 28px;
+    background-color: #ffffff;
+    width: 699px;
+    height: 361px;
+    
+}
+.chart-header{
+    display: flex;
+    margin-left: 3px;
+    margin-top: 4px;
+    align-items: center;
+    gap: 20px;
+}
+
+.chart-header .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+.chart-header h2{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px; /* 120.729% */
+    letter-spacing: -0.72px;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.chart-container p{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */;
+    margin-left: 55px;
+}
+
+@media (max-width: 430px) {
+    .chart-container {
+        padding: 15px; /* Reducir el padding en dispositivos pequeños */
+        width: 90%; /* Usar el 90% del ancho disponible */
+    }
+
+    .chart-header h2 {
+        font-size: 16px; /* Ajustar tamaño del título */
+    }
+
+    .chart-container p {
+        font-size: 12px; /* Reducir el tamaño del texto descriptivo */
+        line-height: 18px;
+    }
+}

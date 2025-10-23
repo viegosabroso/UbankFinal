@@ -1,0 +1,106 @@
+/* General layout */
+.secondview {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .secondview-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+ 
+  .secondview-header h1 {
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    font-weight: semibold;
+    line-height: 1.08;
+    color: #1F1E30;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  .Secondview-highlight {
+    color: #8644DB;
+  }
+  
+  .secondview-header h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  .secondview-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 352px;
+    
+  }
+
+  .secondview-image img {
+    width: 214px; /* Tamaño de la imagen */
+    height: auto;
+    margin-bottom: 24px;
+  }
+  
+
+ .secondview-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  
+  /* Buttons */
+  .secondview-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    
+  }
+  
+  .secondview-buttons .button-cancel {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    
+  }
+  
+  .secondview-buttons .button-cancel:hover {
+    background-color: #dcdcdc;
+    color: #333;
+  }
+  
+  .secondview-buttons .button-continue {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #8644DB;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .secondview-buttons .button-continue:hover {
+    background-color: #702BBE;
+  }
+  

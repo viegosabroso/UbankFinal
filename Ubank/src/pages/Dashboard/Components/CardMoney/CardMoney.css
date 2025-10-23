@@ -1,0 +1,96 @@
+.header h3{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px; /* 120.729% */
+    letter-spacing: -0.72px;
+}
+
+.header .icon{
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+.amount h1{
+    font-family: Poppins;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px; 
+    letter-spacing: -1.1px;
+    margin-top: 34px;
+}
+
+select{
+    background: none;
+    border: 1px solid #363538;
+    box-sizing: border-box;
+    border-radius: 32px;
+    padding: 5px;
+    width: 73px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: -0.56px;
+    
+    
+}
+
+.dropdown-div{
+    display: flex; 
+    margin-left: 249px;
+    margin-top: -37px;
+    gap: 50px;
+}
+
+.balance-card{
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 20px;
+    height: 136px;
+    width: 339px;
+    margin-top: 20px;
+}
+
+.header .title-icon{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 1px;
+    
+}
+
+
+
+@media (max-width: 430px) {
+    .balance-card {
+        width: 100%; 
+        height: auto; 
+        border-radius: 12px; 
+    }
+
+    .header h3 {
+        font-size: 12px; 
+        line-height: 16px;
+    }
+
+    .amount h1 {
+        font-size: 18px; 
+        margin-top: 10px;
+    }
+
+    select {
+        font-size: 10px; 
+    }
+
+    .dropdown-div {
+        margin-left: 0;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}

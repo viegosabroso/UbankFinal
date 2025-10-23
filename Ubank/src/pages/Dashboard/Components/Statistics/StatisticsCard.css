@@ -1,0 +1,74 @@
+.statistics-card{
+    width: 410px;
+    background-color: #fff;
+    height: 455px;
+    position: relative;
+    margin-top: -190px;
+    border-radius: 28px;
+    margin-left: 7px;
+}
+
+.statistics-legend{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 10px;
+    gap: 15px;
+   
+
+}
+
+.statistics-header{
+    display: flex;
+    margin-left: 26px;
+    margin-top: 25px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.statistics-card h2{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px; /* 120.729% */
+    letter-spacing: -0.72px;
+}
+
+.statistics-card p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin-left: 18px;
+}
+
+.statistics-card .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.statistics-select{
+    margin-left: 120px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Espacio entre leyendas */
+    font-size: 14px;
+  }
+  
+  .legend-color {
+    width: 12px; /* Tamaño del círculo */
+    height: 12px;
+    border-radius: 50%; /* Hace que sea un círculo */
+    margin-right: 1px; /* Espacio entre el círculo y el texto */
+  }

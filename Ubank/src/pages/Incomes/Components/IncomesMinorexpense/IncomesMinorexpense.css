@@ -1,0 +1,118 @@
+/* IncomesExpenses.css */
+.incomes-expenses {
+    background-color: #ffffff;
+    border-radius: 28px;
+    padding: 20px;   
+    height: 191px;
+    width: 348px;
+}
+.header-incomesexpenses {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+
+
+.incomes-expenses .header-incomesexpenses span {
+    background-color: #DCE775; /* Fondo verde claro para el ícono */
+    padding: 12px; /* Tamaño ajustado */
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+.not-found {
+    color: #888; 
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+}
+.incomebarchart .recharts-surface{
+    position: relative;
+    margin-left: 20px;
+    transform: rotate(90deg);
+}
+
+.incomebarchart{
+    margin-top: -20px;
+}
+.incomesexpenses-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    top: -155px;
+    left: 230px;
+}
+
+#expenses-info{
+    font-size: 11.9px;
+}
+
+.rectangle-incomes{
+    background-color: #D7F177;
+    height: 30px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+.rectangle-expenses2{
+    display: flex;
+
+    background-color: #FF7008;
+    height: 30px;
+    width: 5px;
+    border-radius: 10px;
+}
+.incomesexpenses-info-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-incomesexpenses h2{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px;
+    letter-spacing: -0.72px;
+}
+
+.leyenda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: left;
+    margin-top: 2px;
+}
+
+.leyenda2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: left;
+    margin-top: 1px;
+}
+
+.leyenda p{
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4px;
+    letter-spacing: -0.48px;
+}
+
+.leyenda2 p{
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4px;
+    letter-spacing: -0.48px;
+}

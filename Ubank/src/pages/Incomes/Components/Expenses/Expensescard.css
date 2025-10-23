@@ -1,0 +1,54 @@
+#Expensescards{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 150px;
+    background-color: #F7F7F3;
+    padding: 15px;
+    border-radius: 15px;
+    
+}
+#row-Expensescard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+#Expensescard-details{
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+#Expensescard-details p:first-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; 
+}
+
+
+#Expensescard-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+#Expensescard-details h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+#Expensescard-amount {
+    font-family: 'Lufga', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}

@@ -1,0 +1,46 @@
+.tinycards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: center;
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 16px;
+    width: 215px; 
+    height: 168px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.tinycards:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.tinycards h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500; 
+    color: #333333; 
+    margin: 12px 0 8px; 
+    text-align: left;
+}
+
+
+.tinycards .first-part {
+    font-weight: 400; 
+}
+
+
+.tinycards .highlighted {
+    color: #8644DB; 
+    font-weight: 600; 
+}
+
+.tinycards img {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain; 
+    margin-bottom: 8px; 
+}
+

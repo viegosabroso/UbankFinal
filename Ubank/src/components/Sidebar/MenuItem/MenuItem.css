@@ -1,0 +1,28 @@
+.menu-item a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item .icon {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+
+.menu-item a:hover {
+  background-color: #D7F177;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu-item a:hover .icon {
+  /* Aquí no cambiamos nada en CSS, el cambio de `src` se hará con JavaScript */
+}
+
+  

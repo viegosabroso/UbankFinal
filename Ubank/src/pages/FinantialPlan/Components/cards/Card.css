@@ -1,0 +1,48 @@
+/* Estilos específicos del componente Card */
+
+/* Tarjeta */
+.card {
+    width: 291px;
+    height: 310px;
+    border-radius: 24px;
+    background: #ffffff;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Número en la tarjeta */
+.card-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.card-image{
+    align-items: center;
+    width: 198px;
+    height: 170.03px;
+    margin-left: 25px;
+    margin-top: 12px;
+
+}
+
+
+/* Texto de la tarjeta */
+.card-text {
+    color: rgba(23, 26, 31, 0.85);
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.121px;
+    margin-top: 18px;
+    margin-left: 10px;
+    width: 250px;
+}

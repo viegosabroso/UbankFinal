@@ -1,0 +1,93 @@
+
+.saving-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 970px;
+    margin: 10px auto;
+  }
+  
+  .saving-card-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .saving-card-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #eef6d9; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .saving-card-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .saving-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .saving-card-frequency {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .saving-card-timeleft {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  .saving-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+  }
+  
+  .saving-card-percentage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8c44f8;
+    margin-bottom: 10px;
+  }
+  
+  .saving-card-progress {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background-color: #eaeaea;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  .saving-card-progress-bar {
+    height: 100%;
+    background-color: #8c44f8;
+    border-radius: 4px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .saving-card-minmax {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .saving-card-min,
+  .saving-card-max {
+    font-size: 0.9rem;
+    color: #777;
+  }

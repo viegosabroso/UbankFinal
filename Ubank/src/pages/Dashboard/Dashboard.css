@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Lufga';
+    src: url(./Fonts/LufgaBold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+.dashboard-content{
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.body-content {
+    display: flex;
+    flex-direction: column;
+    width: 1135px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    margin-left: 0; 
+    margin-right: 0; 
+    
+}
+
+.dash-progress-charts{
+    display: flex;
+    gap: 23px;
+    margin-bottom: 20px;
+}
+
+.info-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+}
+
+.last-dash-container{
+    display: flex;
+    gap: 23px;
+}
+
+
+
+
+@media (max-width: 430px) {
+
+    .sidebar {
+        display: none !important; 
+      }
+ 
+    .dashboard-content {
+        margin-left: 5px; 
+    }
+
+    .dash-progress-charts {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .info-section {
+        margin-left: 10px;
+    }
+
+    .text-content h2 {
+        font-size: 16px;
+        text-align: left; 
+    }
+
+    .text-content p {
+        font-size: 12px;
+        text-align: left; 
+    }
+
+    
+    .currency-converter {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    .progress-card {
+        width: 100%; 
+    }
+}

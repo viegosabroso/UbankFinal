@@ -1,0 +1,134 @@
+.incomescard-container-scroll{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 386px;
+
+}
+
+.incomes-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 28px;
+    padding: 20px;
+    width: 435px;
+    height: 407px;
+    scrollbar-color: #7C4DFF #ffffff;
+}
+
+.incomes-container .header2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -4px;
+    margin-bottom: 2px;
+    align-items: center;
+    
+
+
+}
+
+.incomes-container .header2 h1{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px; /* 120.729% */
+    letter-spacing: -0.72px;
+    margin-left: 0%;
+    margin-top: -6px;
+}
+
+.incomes-container .header2 .add-income{
+  margin-left: 106px;
+}
+
+.incomes-container .header2 .add-income:hover{
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateY(-2px); /* Mueve el elemento hacia arriba 5px */
+}
+
+
+.incomes-container p{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: -0.56px;
+    margin-left: 55px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+.incomes-container .header2 .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+
+#incomescard-amount{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#incomescards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+    padding: 5px;
+    border-radius: 50px;
+    height: 58px;
+    margin-left: -15px;
+}
+#incomescard-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+#incomescard-date{
+    font-size: 10px;
+    font-weight: 100;
+    color: #474647;
+    align-self: flex-end;
+    margin-right: 20px;
+    
+}
+
+#incomescard-date h3{
+    font-size: 12px;
+    font-weight: 500;
+    color: #5f5e5f;
+    align-self: flex-end;;
+}
+#row-incomescard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#incomescard-title{
+    color: #000;
+    font-family: Poppins;
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21.731px; /* 181.093% */
+    letter-spacing: -0.48px;
+    margin-left: 0%;
+    margin-bottom: -4px;
+    margin-top: 1.5px;
+
+}
